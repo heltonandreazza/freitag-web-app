@@ -1,11 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { ClockIcon } from '@heroicons/react/solid'
-import React, { Fragment, useState } from 'react'
-import { SocialIcon } from 'react-social-icons'
+import React, { useState } from 'react'
 import banner from '../assets/banner.png'
-import socialproof from '../assets/socialproof.png'
 import c1 from '../assets/c1.png'
 import c10 from '../assets/c10.png'
 import c11 from '../assets/c11.png'
@@ -20,17 +16,10 @@ import c6 from '../assets/c6.png'
 import c7 from '../assets/c7.png'
 import c8 from '../assets/c8.png'
 import c9 from '../assets/c9.png'
-import logo from '../assets/logo.png'
+import socialproof from '../assets/socialproof.png'
+import Footer from '../components/Footer'
+import Navigator from '../components/Navigator'
 import '../styles/global.css'
-
-const navigation = [
-  { name: 'Unidades', href: '#unidades' },
-  { name: 'Especialidades', href: '#especialidades' },
-  { name: 'Atendimento', href: '#atendimento' },
-  { name: 'Convênios', href: '#convenios' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Equipe', href: '/equipe' },
-]
 
 const URLS = {
   whatsapp: 'https://wa.me/5547992626100',
@@ -161,144 +150,6 @@ const CTABanner = () => (
   </div>
 )
 
-const Footer = () => (
-  <footer className="bg-white" aria-labelledby="footerHeading">
-    <h2 id="footerHeading" className="sr-only">
-      Footer
-    </h2>
-    <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
-      <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-        <div className="space-y-8 xl:col-span-1">
-          <img className="h-24" src={logo} alt="Hospital de olhos Freitag" />
-          <p className="text-gray-400 text-base">
-            Fazendo do mundo um lugar melhor e mais saudável para se viver.
-          </p>
-          <div className="flex space-x-6">
-            <a
-              href={URLS.facebook}
-              target="_blank"
-              className="text-blue-400 hover:text-blue-400"
-              rel="noreferrer"
-            >
-              <span className="sr-only">Facebook</span>
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fillRule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
-
-            <a
-              href={URLS.instagram}
-              target="_blank"
-              className="text-blue-400 hover:text-blue-400"
-              rel="noreferrer"
-            >
-              <span className="sr-only">Instagram</span>
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  fillRule="evenodd"
-                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
-          <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Menu</h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <a href="#unidades" className="text-base text-gray-400 hover:text-gray-900">
-                    Unidades
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#especialidades" className="text-base text-gray-400 hover:text-gray-900">
-                    Especialidades
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-12 md:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Informações
-              </h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <a
-                    href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
-                    target="_blank"
-                    className="text-base text-gray-400 hover:text-gray-900"
-                    rel="noreferrer"
-                  >
-                    Atendimento
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/blog"
-                    target="_blank"
-                    className="text-base text-gray-400 hover:text-gray-900"
-                    rel="noreferrer"
-                  >
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Empresa
-              </h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <a
-                    href="https://www.facebook.com/hospitaldeolhosfreitag/"
-                    className="text-base text-gray-400 hover:text-gray-900"
-                  >
-                    Sobre
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="mt-12 md:mt-0">
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Legal
-              </h3>
-              <ul className="mt-4 space-y-4">
-                <li>
-                  <a href="#" className="text-base text-gray-400 hover:text-gray-900">
-                    Termos de uso
-                  </a>
-                </li>
-
-                <li>
-                  <a href="#" className="text-base text-gray-400 hover:text-gray-900">
-                    Políticas de privacidade
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="mt-12 border-t border-gray-200 pt-8">
-        <p className="text-base text-gray-400 xl:text-center">
-          &copy; 2021 Hospital de olhos Freitag, todos os direitos reservados.
-        </p>
-      </div>
-    </div>
-  </footer>
-)
-
 const Specialties = () => (
   <div className="bg-white" id="especialidades">
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
@@ -411,96 +262,7 @@ const Index = () => {
         <div className="relative">
           <CTAHeader />
         </div>
-        <Popover className="relative bg-white">
-          {({ open }) => (
-            <>
-              <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
-                <div className="flex justify-start lg:w-0 lg:flex-1">
-                  <a href="#">
-                    <span className="sr-only">Workflow</span>
-                    <img className="h-20" src={logo} alt="logo" />
-                  </a>
-                </div>
-                {/* mobile menu */}
-                <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
-                    <span className="sr-only">Open menu</span>
-                    <MenuIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-                <Transition
-                  show={open}
-                  as={Fragment}
-                  enter="duration-200 ease-out"
-                  enterFrom="opacity-0 scale-95"
-                  enterTo="opacity-100 scale-100"
-                  leave="duration-100 ease-in"
-                  leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95"
-                >
-                  <Popover.Panel
-                    focus
-                    static
-                    className="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
-                  >
-                    <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-                      <div className="pt-5 pb-6 px-5">
-                        <div className="flex items-center justify-between">
-                          <div>
-                            <img
-                              className="h-8 w-auto"
-                              src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                              alt="Workflow"
-                            />
-                          </div>
-                          <div className="-mr-2">
-                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
-                              <span className="sr-only">Close menu</span>
-                              <XIcon className="h-6 w-6" aria-hidden="true" />
-                            </Popover.Button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="py-6 px-5">
-                        <div className="grid grid-cols-2 gap-4">
-                          {navigation.map((item) => (
-                            <a
-                              key={item.name}
-                              href={item.href}
-                              className="text-base font-medium text-gray-900 hover:text-blue-400"
-                            >
-                              {item.name}
-                            </a>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </Popover.Panel>
-                </Transition>
-                {navigation.map((item) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="text-base font-medium text-gray-400 hover:text-blue-400"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-                <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                  <SocialIcon
-                    className="flex whitespace-nowrap mr-2"
-                    url="https://www.facebook.com/freitag.laboratorios/"
-                  />
-                  <SocialIcon
-                    className="flex whitespace-nowrap mr-2"
-                    url="https://www.instagram.com/freitaglab/"
-                  />
-                  <SocialIcon className="flex whitespace-nowrap " url="https://www.youtube.com" />
-                </div>
-              </div>
-            </>
-          )}
-        </Popover>
+        <Navigator />
       </header>
 
       <main>
@@ -622,6 +384,16 @@ const Index = () => {
           />
           <Place
             id="slide-2"
+            title="Hospital de Olhos Freitag - Indaial"
+            description="Endereço: Rua Marechal Deodoro da Fonseca, 1025 - Sala 04 - Tapajós, Indaial - SC"
+            description2="Ref: Tapajós"
+            contact="Telefone: (47) 99168-9605"
+            contact2="Whatsapp: (47) 99168-9605"
+            contactUrl="https://wa.me/5547991689605"
+            urlmap="https://www.google.com/maps/place/Rua+Marechal+Deodoro+da+Fonseca,+1025+-+Tapaj%C3%B3s,+Indaial+-+SC,+89130-000/@-26.9008823,-49.2433544,17z/data=!3m1!4b1!4m5!3m4!1s0x94df028a331fab73:0xc94877b2eea8b0c1!8m2!3d-26.9008823!4d-49.2411657"
+          />
+          <Place
+            id="slide-3"
             title="Hospital de Olhos Freitag - Benedito Novo"
             description="Endereço: Rua Quirino Longo, 300 - Centro, Benedito Novo - SC"
             description2="Ref: Anexo ao Hospital São Benedito"
@@ -631,7 +403,7 @@ const Index = () => {
             urlmap="https://www.google.com/maps/place/R.+Quirino+Longo,+300+-+Centro,+Benedito+Novo+-+SC,+89124-000/@-26.7820527,-49.3648838,17z/data=!4m5!3m4!1s0x94def80889b565a3:0x1df98072b912c294!8m2!3d-26.7820527!4d-49.3626951"
           />
           <Place
-            id="slide-3"
+            id="slide-4"
             title="Hospital de Olhos Freitag - Apiúna"
             description="Endereço: Rua Rio de Janeiro, 57, Apiúna - SC"
             description2="Ref: Próximo ao posto Mime"
@@ -653,11 +425,17 @@ const Index = () => {
             className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
             href="#slide-2"
           >
-            benedito novo
+            indaial
           </a>
           <a
             className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
             href="#slide-3"
+          >
+            benedito novo
+          </a>
+          <a
+            className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
+            href="#slide-4"
           >
             apiúna
           </a>
