@@ -1,101 +1,52 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import React, { Fragment, useState } from 'react'
 import { ClockIcon } from '@heroicons/react/solid'
+import React, { Fragment, useState } from 'react'
 import { SocialIcon } from 'react-social-icons'
-
-import iconinstaround from '../assets/icon-insta-round.png'
-import iconinsta from '../assets/icon-insta.png'
-import iconfacebook from '../assets/icon-facebook.png'
-import iconfacebookround from '../assets/icon-facebook-round.png'
-import iconyoutuberound from '../assets/icon-youtube-round.png'
-
-import logo from '../assets/logo.png'
+import banner from '../assets/banner.png'
 import socialproof from '../assets/socialproof.png'
+import c1 from '../assets/c1.png'
+import c10 from '../assets/c10.png'
+import c11 from '../assets/c11.png'
+import c12 from '../assets/c12.png'
+import c13 from '../assets/c13.png'
+import c14 from '../assets/c14.png'
+import c2 from '../assets/c2.png'
+import c3 from '../assets/c3.png'
+import c4 from '../assets/c4.png'
+import c5 from '../assets/c5.png'
+import c6 from '../assets/c6.png'
+import c7 from '../assets/c7.png'
+import c8 from '../assets/c8.png'
+import c9 from '../assets/c9.png'
+import logo from '../assets/logo.png'
 import '../styles/global.css'
 
 const navigation = [
-  { name: 'Unidades', href: '#' },
-  { name: 'Especialidades', href: '#' },
-  { name: 'Atendimento', href: '#' },
-  { name: 'Convênios', href: '#' },
-  { name: 'Blog', href: '#' },
-  { name: 'Equipe', href: '#' },
+  { name: 'Unidades', href: '#unidades' },
+  { name: 'Especialidades', href: '#especialidades' },
+  { name: 'Atendimento', href: '#atendimento' },
+  { name: 'Convênios', href: '#convenios' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Equipe', href: '/equipe' },
 ]
 
 const URLS = {
-  whatsapp: 'https://wa.me/554792203282?text=',
-  facebook:
-    'https://www.facebook.com/academiatimbo/?fb_dtsg_ag=Adyx3XHjgErXBpC3Ivdrd1_uNuXKwApGs99tZMHvdWWgvQ%3AAdxePHy5STMb6oKDFSSIqZC5xfXHDO4HJIYd1pQyVaJe5g',
-  instagram: 'https://www.instagram.com/academiacultural',
-  youtube: 'https://www.youtube.com/channel/UCBRl2aeplT0kf9w0fH5BqYw',
-  playstore: 'https://play.google.com/store/apps/details?id=com.academiacultural.culturalapp',
-  appstore: 'https://apps.apple.com/us/app/id1504569755',
+  whatsapp: 'https://wa.me/5547992626100',
+  facebook: 'https://www.facebook.com/hospitaldeolhosfreitag/',
+  instagram: 'https://www.instagram.com/hospitaldeolhosfreitag/',
+  youtube: '',
+  playstore: '',
+  appstore: '',
 }
 
 const CTA_WA_MESSAGES = {
-  headerTopCta:
-    '1. Ola, estive no site gostaria de conhecer os projetos de vida da academia Cultural!',
-  headerCtaMenuItem2: '2. Olá!! Estive no site para agendar uma visita!',
-  headerCtaMenuItem3:
-    '3. Olá!! Estive no site para me exercitar em casa. Poderia me explicar como funciona??',
-  heroCtaLifeProject: '4. Ola, estive no site e quero iniciar um projeto de vida com vocês!',
-  heroCtaExerciseAtHome:
-    '3. Olá!! Estive no site para me exercitar em casa. Poderia me explicar como funciona??',
-  videosCta1:
-    '5. Olá!! Estive no site e me inspirei na história da Rose com projeto reabilita! Quero fazer também!',
-  videosCta2:
-    '5. Olá!! Estive no site e me inspirei na história da Jeniffer com projeto reabilita! Quero fazer também!',
-  videosCta3:
-    '5. Olá!! Estive no site e me inspirei na história da heide com projeto reabilita! Quero fazer também!',
-  greatPlansCta1: '6. Olá!! Estive no site e curti muito o plano Resultado Já. Poderia me ajudar??',
-  greatPlansCta2: '7. Olá!! Estive no site e curti muito o plano Reabilita. Poderia me ajudar??',
-  greatPlansCta3: '8. Olá!! Estive no site e curti muito o plano Reab-vid. Poderia me ajudar??',
-  plansCta1: '9. Olá!! Estive no site e curti muito o plano HIPER-C. Poderia me ajudar??',
-  plansCta2: '10. Olá!! Estive no site e curti muito o plano Studio Pilates. Poderia me ajudar??',
-  plansCta3: '11. Olá!! Estive no site e curti muito o plano Fisioterapia. Poderia me ajudar??',
-  plansCta4: '12. Olá!! Estive no site e curti muito o plano Viva Leve. Poderia me ajudar??',
-  plansCta5: '13. Olá!! Estive no site e curti muito o plano Cardio Speed. Poderia me ajudar??',
-  sectionCta:
-    '14. Olá!! Estive no site e eu gostaria de agendar um atendimento personalizado. Poderia me ajudar??',
-  footerCtaContact: '15. Olá!! Estive no site o link Atendimento, poderia me ajudar??',
-  footerCtaJobs: '16. Olá!! Estive no site o link Trabalhe conosco, poderia me ajudar??',
+  headerTopCta: '1. Ola, estive no site e gostaria de contatar vcs!',
 }
 
-const getWhatsUrl = (text, url) => encodeURI(`${url || URLS.whatsapp}${text}`)
+const getWhatsUrl = (text, url) => encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
 const openWhatsUrl = (text) => window.open(getWhatsUrl(text), '_blank')
-
-const blogVideos = [
-  {
-    imageProps: { src: socialproof, alt: 'video 1' },
-    title: 'Rose',
-    ctaTitle: 'Comece agora',
-    ctaOnClick: () => openWhatsUrl(CTA_WA_MESSAGES.videosCta1),
-    videoUrl: 'https://www.youtube.com/embed/grxQa2o-jCg',
-    description: `
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.`,
-  },
-  {
-    imageProps: { src: socialproof, alt: 'video 2' },
-    title: 'Jeniffer',
-    ctaTitle: 'Comece agora',
-    ctaOnClick: () => openWhatsUrl(CTA_WA_MESSAGES.videosCta2),
-    videoUrl: 'https://www.youtube.com/embed/grxQa2o-jCg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
-  },
-  {
-    imageProps: { src: socialproof, alt: 'video 3' },
-    title: 'Heide',
-    ctaTitle: 'Comece agora',
-    ctaOnClick: () => openWhatsUrl(CTA_WA_MESSAGES.videosCta3),
-    videoUrl: 'https://www.youtube.com/embed/grxQa2o-jCg',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.',
-  },
-]
-
 const YoutubeVideo = ({ src }) => (
   <iframe
     title="titulo"
@@ -105,13 +56,14 @@ const YoutubeVideo = ({ src }) => (
     height="320"
     src={src}
     frameBorder="0"
+    allow="autoplay;"
   />
 )
 
 const Button = ({ children, ...otherProps }) => (
   <button
     type="button"
-    className="mt-3 mr-3 px-4 py-3 border border-transparent text-base font-medium text-white bg-blue-500 shadow-sm hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
+    className="mt-3 mr-3 px-4 py-3 border border-transparent text-base font-medium text-white bg-blue-400 shadow-sm hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-400 sm:mt-0 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto"
     // eslint-disable-next-line react/jsx-props-no-spreading
     {...otherProps}
   >
@@ -120,10 +72,10 @@ const Button = ({ children, ...otherProps }) => (
 )
 
 const CTAHeader = () => (
-  <nav className="flex bg-blue-600 p-4">
+  <nav className="flex bg-blue-500 p-4">
     <div className="flex flex-1 items-center justify-center">
       <a
-        href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
+        href={getWhatsUrl()}
         target="_blank"
         rel="noreferrer"
         className="flex flex-end items-center justify-center font-regular text-lg text-white hover:text-gray-300 mr-8"
@@ -132,34 +84,10 @@ const CTAHeader = () => (
           <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
         </svg>
         <span className="ml-3">Consultas e exames:</span>
-        <span className="ml-3">(47) 988665544</span>
+        <span className="ml-3">(47) 99262-6100</span>
       </a>
     </div>
   </nav>
-)
-
-const HLTitle = ({ children }) => (
-  <h1>
-    <span className="mt-1 block text-4xl tracking-tight font-extrabold sm:text-5xl xl:text-6xl">
-      {children}
-    </span>
-  </h1>
-)
-const HLDescription = ({ children }) => (
-  <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-    {children}
-  </p>
-)
-const HLButtonActions = ({ children }) => (
-  <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">{children}</div>
-)
-const HLLinkActions = ({ children }) => (
-  <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">{children}</div>
-)
-const VideosSection = ({ children }) => <div className="relative max-w-7xl mx-auto">{children}</div>
-const VSHeader = ({ children }) => <div className="flex flex-col">{children}</div>
-const VSContent = ({ children }) => (
-  <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">{children}</div>
 )
 
 const BlogCardContainer = ({ children, onClick }) => (
@@ -189,28 +117,7 @@ const BCContentSubtitle = ({ children, href = '#' }) => (
 const BCContentDescription = ({ title, description, href = '#' }) => (
   <div href={href} className="block mt-2 text-center">
     <p className="text-xl font-semibold text-gray-900">{title}</p>
-    <p className="mt-3 text-base text-gray-500">{description}</p>
-  </div>
-)
-
-const BCContentAuthor = ({ image, name, datetime, href = '#' }) => (
-  <div className="mt-6 flex items-center">
-    <div className="flex-shrink-0">
-      <a href={href}>
-        <span className="sr-only">Brenna Goyette</span>
-        <img className="h-10 w-10" src={image} alt="" />
-      </a>
-    </div>
-    <div className="ml-3">
-      <p className="text-sm font-medium text-gray-900">
-        <a href={href} className="hover:underline">
-          {name}
-        </a>
-      </p>
-      <div className="flex space-x-1 text-sm text-gray-500">
-        <time dateTime="2020-03-10">{datetime}</time>
-      </div>
-    </div>
+    <p className="mt-3 text-base text-gray-400">{description}</p>
   </div>
 )
 
@@ -236,109 +143,19 @@ const BlogCard = ({
     </BCFooter>
   </BlogCardContainer>
 )
-const CTAImageContentSection = ({ children, className }) => (
-  <div id="main-projects" className={className || 'relative py-16 bg-blue-50'}>
-    <div className="max-w-7xl mx-auto bg-blue-500 lg:bg-transparent">
-      <div className="lg:grid lg:grid-cols-12">{children}</div>
-    </div>
-  </div>
-)
-
-const CTAICSContent = ({ children, reverse }) => (
-  <div
-    className={`relative bg-blue-400 ${
-      reverse ? 'lg:col-start-1' : 'lg:col-start-3'
-    } lg:row-start-1 lg:col-span-10  lg:grid lg:grid-cols-10 lg:items-center`}
-  >
-    {children}
-  </div>
-)
-const CTAICSContentAbsSVG = ({ children }) => (
-  <div className="hidden absolute inset-0 overflow-hidden lg:block" aria-hidden="true">
-    {children}
-  </div>
-)
-
-const CTAICSContentDescriptions = ({ children, reverse }) => (
-  <div
-    className={`relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 ${
-      reverse ? 'lg:col-start-2' : 'lg:col-start-4'
-    } lg:col-span-6`}
-  >
-    {children}
-  </div>
-)
-
-const CTAICSContentDescriptionsCTA = ({ children, ...otherProps }) => (
-  <a
-    className="block w-full py-3 pl-3 px-5 mr-4 text-center bg-white border border-transparent shadow-md text-base font-medium text-blue-600 hover:bg-blue-50 sm:inline-block sm:w-auto"
-    {...otherProps}
-  >
-    {children}
-  </a>
-)
-
-const CTAICSContentDescriptionsParagraph = ({ children }) => (
-  <p className="text-lg text-white">{children}</p>
-)
-
-const CTAICSContentDescriptionsTitle = ({ children }) => (
-  <h2 className="text-3xl font-extrabold text-white" id="join-heading">
-    {children}
-  </h2>
-)
-
-const CTAICSImage = ({ image, alt, reverse }) => (
-  <div
-    className={`relative ${
-      reverse ? 'lg:col-start-9' : 'lg:col-start-1'
-    } lg:row-start-1 lg:col-span-4 lg:bg-transparent z-10`}
-  >
-    <div className="max-w-md mx-auto sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
-      <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-        <img className="object-cover object-center shadow-2xl max-height-0" src={image} alt={alt} />
-      </div>
-    </div>
-  </div>
-)
-
-const BottomSquaresDots = () => (
-  <svg
-    className="absolute bottom-full left-full transform translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0"
-    width="404"
-    height="384"
-    fill="none"
-    viewBox="0 0 404 384"
-    aria-hidden="true"
-  >
-    <defs>
-      <pattern
-        id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
-        x="0"
-        y="0"
-        width="20"
-        height="20"
-        patternUnits="userSpaceOnUse"
-      >
-        <rect x="0" y="0" width="4" height="4" className="text-blue-500" fill="currentColor" />
-      </pattern>
-    </defs>
-    <rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
-  </svg>
-)
 
 const CTABanner = () => (
   <div className="flex py-8 bg-blue-50 ">
     <div className="flex-1 px-4">
       <div className="flex justify-end">
-        <ClockIcon className="h-40 w-40 text-blue-500" />
+        <ClockIcon className="h-40 w-40 text-blue-400" />
       </div>
     </div>
-    <div className="flex-1 px-4 ng-indigo-500">
+    <div className="flex-1 px-4 ng-blue-400">
       <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        <span className="block text-blue-500 mb-2">Consultas e Exames</span>
-        <span className="block mb-2">(47) 99886655</span>
-        <Button onClick={() => openWhatsUrl(CTA_WA_MESSAGES.sectionCta)}>Fale conosco</Button>
+        <span className="block text-blue-400 mb-2">Consultas e Exames</span>
+        <span className="block mb-2">(47) 99262-6100</span>
+        <Button onClick={() => openWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}>Fale conosco</Button>
       </h2>
     </div>
   </div>
@@ -352,15 +169,15 @@ const Footer = () => (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="xl:grid xl:grid-cols-3 xl:gap-8">
         <div className="space-y-8 xl:col-span-1">
-          <img className="h-14" src={logo} alt="Academia cultural" />
-          <p className="text-gray-500 text-base">
+          <img className="h-24" src={logo} alt="Hospital de olhos Freitag" />
+          <p className="text-gray-400 text-base">
             Fazendo do mundo um lugar melhor e mais saudável para se viver.
           </p>
           <div className="flex space-x-6">
             <a
               href={URLS.facebook}
               target="_blank"
-              className="text-blue-400 hover:text-blue-500"
+              className="text-blue-400 hover:text-blue-400"
               rel="noreferrer"
             >
               <span className="sr-only">Facebook</span>
@@ -376,7 +193,7 @@ const Footer = () => (
             <a
               href={URLS.instagram}
               target="_blank"
-              className="text-blue-400 hover:text-blue-500"
+              className="text-blue-400 hover:text-blue-400"
               rel="noreferrer"
             >
               <span className="sr-only">Instagram</span>
@@ -388,36 +205,22 @@ const Footer = () => (
                 />
               </svg>
             </a>
-
-            <a
-              href={URLS.youtube}
-              target="_blank"
-              className="text-blue-400 hover:text-blue-500"
-              rel="noreferrer"
-            >
-              <span className="sr-only">Twitter</span>
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-              </svg>
-            </a>
           </div>
         </div>
         <div className="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
           <div className="md:grid md:grid-cols-2 md:gap-8">
             <div>
-              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">
-                Projetos
-              </h3>
+              <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Menu</h3>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <a href="#main-projects" className="text-base text-gray-500 hover:text-gray-900">
-                    Mais vendidos
+                  <a href="#unidades" className="text-base text-gray-400 hover:text-gray-900">
+                    Unidades
                   </a>
                 </li>
 
                 <li>
-                  <a href="#more-projects" className="text-base text-gray-500 hover:text-gray-900">
-                    Mais comentados
+                  <a href="#especialidades" className="text-base text-gray-400 hover:text-gray-900">
+                    Especialidades
                   </a>
                 </li>
               </ul>
@@ -429,34 +232,22 @@ const Footer = () => (
               <ul className="mt-4 space-y-4">
                 <li>
                   <a
-                    href={getWhatsUrl(CTA_WA_MESSAGES.footerCtaContact)}
+                    href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
                     target="_blank"
-                    className="text-base text-gray-500 hover:text-gray-900"
+                    className="text-base text-gray-400 hover:text-gray-900"
                     rel="noreferrer"
                   >
                     Atendimento
                   </a>
                 </li>
-
                 <li>
                   <a
-                    href={URLS.appstore}
+                    href="/blog"
                     target="_blank"
-                    className="text-base text-gray-500 hover:text-gray-900"
+                    className="text-base text-gray-400 hover:text-gray-900"
                     rel="noreferrer"
                   >
-                    App apple store
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href={URLS.playstore}
-                    target="_blank"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                    rel="noreferrer"
-                  >
-                    App play store
+                    Blog
                   </a>
                 </li>
               </ul>
@@ -469,25 +260,11 @@ const Footer = () => (
               </h3>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <a href="#" className="text-base text-gray-500 hover:text-gray-900">
-                    Sobre
-                  </a>
-                </li>
-
-                {/* <li>
-                  <a href="#" className="text-base text-gray-500 hover:text-gray-900">
-                    Blog
-                  </a>
-                </li> */}
-
-                <li>
                   <a
-                    href={getWhatsUrl(CTA_WA_MESSAGES.footerCtaJobs)}
-                    target="_blank"
-                    className="text-base text-gray-500 hover:text-gray-900"
-                    rel="noreferrer"
+                    href="https://www.facebook.com/hospitaldeolhosfreitag/"
+                    className="text-base text-gray-400 hover:text-gray-900"
                   >
-                    Trabalhe conosco
+                    Sobre
                   </a>
                 </li>
               </ul>
@@ -498,13 +275,13 @@ const Footer = () => (
               </h3>
               <ul className="mt-4 space-y-4">
                 <li>
-                  <a href="#" className="text-base text-gray-500 hover:text-gray-900">
+                  <a href="#" className="text-base text-gray-400 hover:text-gray-900">
                     Termos de uso
                   </a>
                 </li>
 
                 <li>
-                  <a href="#" className="text-base text-gray-500 hover:text-gray-900">
+                  <a href="#" className="text-base text-gray-400 hover:text-gray-900">
                     Políticas de privacidade
                   </a>
                 </li>
@@ -515,7 +292,7 @@ const Footer = () => (
       </div>
       <div className="mt-12 border-t border-gray-200 pt-8">
         <p className="text-base text-gray-400 xl:text-center">
-          &copy; 2021 Academia Cultural, todos os direitos reservados.
+          &copy; 2021 Hospital de olhos Freitag, todos os direitos reservados.
         </p>
       </div>
     </div>
@@ -523,16 +300,16 @@ const Footer = () => (
 )
 
 const Specialties = () => (
-  <div className="bg-white">
+  <div className="bg-white" id="especialidades">
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
       <div className="lg:grid lg:grid-cols-2 lg:gap-44 lg:items-center">
         <div>
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
             Nossas especialidades
           </h2>
-          <p className="mt-3 max-w-3xl text-lg text-gray-500 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-            sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.
+          <p className="mt-3 max-w-3xl text-lg text-gray-400 mb-8">
+            Com uma equipe médica de alta capacidade, atendemos as mais diversas especialidades para
+            você!
           </p>
           <div className="mt-8 grid grid-cols-3 gap-2 lg:mt-0">
             <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
@@ -605,7 +382,7 @@ const Specialties = () => (
           <p className="px-8 pb-6 pt-8 max-w-3xl text-justify text-lg text-bold text-gray-900">
             Maiquel Zafanelli - CEO
           </p>
-          <p className="px-8 pb-2 max-w-3xl text-justify text-md text-gray-500">
+          <p className="px-8 pb-2 max-w-3xl text-justify text-md text-gray-400">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
             sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.
           </p>
@@ -613,7 +390,7 @@ const Specialties = () => (
             <a
               href={URLS.playstore}
               target="_blank"
-              className="font-medium text-blue-500 underline"
+              className="font-medium text-blue-400 underline"
               rel="noreferrer"
             >
               Mais sobre a equipe
@@ -626,8 +403,7 @@ const Specialties = () => (
 )
 
 const Index = () => {
-  const [showVideoModal, setShowVideoModal] = useState(false)
-  const [currentVideoUrlModal, setCurrentVideoUrlModal] = useState(false)
+  const [showSocialProof, setShowSocialProof] = useState(false)
   return (
     <div className="min-h-screen bg-white">
       {/* MENU E HERO */}
@@ -642,16 +418,12 @@ const Index = () => {
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                   <a href="#">
                     <span className="sr-only">Workflow</span>
-                    <img
-                      className="h-8 w-auto sm:h-10"
-                      src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                      alt=""
-                    />
+                    <img className="h-20" src={logo} alt="logo" />
                   </a>
                 </div>
                 {/* mobile menu */}
                 <div className="-mr-2 -my-2 md:hidden">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
                     <span className="sr-only">Open menu</span>
                     <MenuIcon className="h-6 w-6" aria-hidden="true" />
                   </Popover.Button>
@@ -682,7 +454,7 @@ const Index = () => {
                             />
                           </div>
                           <div className="-mr-2">
-                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500">
+                            <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-400 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-400">
                               <span className="sr-only">Close menu</span>
                               <XIcon className="h-6 w-6" aria-hidden="true" />
                             </Popover.Button>
@@ -695,19 +467,11 @@ const Index = () => {
                             <a
                               key={item.name}
                               href={item.href}
-                              className="text-base font-medium text-gray-900 hover:text-gray-700"
+                              className="text-base font-medium text-gray-900 hover:text-blue-400"
                             >
                               {item.name}
                             </a>
                           ))}
-                        </div>
-                        <div className="mt-6">
-                          <a
-                            href="#"
-                            className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
-                          >
-                            Entrar
-                          </a>
                         </div>
                       </div>
                     </div>
@@ -717,7 +481,7 @@ const Index = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-base font-medium text-gray-500 hover:text-gray-900"
+                    className="text-base font-medium text-gray-400 hover:text-blue-400"
                   >
                     {item.name}
                   </a>
@@ -746,22 +510,14 @@ const Index = () => {
             <div className="max-w-full mx-auto">
               <div className="relative shadow-xl sm:overflow-hidden h-1/2">
                 <div className="absolute inset-0">
-                  <img
-                    className="h-full w-full object-cover"
-                    src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2830&q=80&sat=-100"
-                    alt="People working on laptops"
-                  />
-                  <div className="absolute inset-0 bg-blue-700 mix-blend-multiply" />
+                  <img className="h-full w-full object-cover" src={banner} alt="doctors" />
+                  {/* <div className="absolute inset-0 bg-blue-500 mix-blend-multiply" /> */}
                 </div>
-                <div className="relative px-4 py-16 sm:px-6 lg:p-48 2xl:p-80 lg:px-8">
-                  <h1 className="text-center text-3xl font-extrabold tracking-tight sm:text-4xl lg:text-5xl">
-                    <span className="text-white">Take control of your</span>
-                    <span className="text-blue-200"> customer support</span>
-                  </h1>
+                <div className="relative px-4 py-16 sm:px-6 lg:p-48 2xl:p-80">
                   <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center">
                     <a
-                      href="#"
-                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-700 bg-white hover:bg-blue-50 sm:px-8"
+                      href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
+                      className="flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-blue-400 bg-white hover:bg-blue-50 sm:px-8 opacity-90 hover:opacity-100"
                     >
                       Fale conosco
                     </a>
@@ -774,244 +530,136 @@ const Index = () => {
           <Specialties />
 
           {/* CONVENIOS */}
-          <div className="bg-gray-100">
-            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-              <p className="text-center text-sm font-semibold uppercase text-gray-500 tracking-wide">
+          <div className="bg-gray-100" id="convenios">
+            <div className="max-w-7xl mx-auto py-16 px-4 sm:px-8">
+              <p className="text-center text-sm font-semibold uppercase text-gray-400 tracking-wide">
                 Nossos convênios
               </p>
-              <div className="mt-6 grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                    alt="Tuple"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                    alt="Mirage"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                    alt="StaticKit"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                    alt="Transistor"
-                  />
-                </div>
-                <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                    alt="Workcation"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                    alt="Tuple"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                    alt="Mirage"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                    alt="StaticKit"
-                  />
-                </div>
-                <div className="col-span-1 flex justify-center md:col-span-2 md:col-start-2 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                    alt="Transistor"
-                  />
-                </div>
-                <div className="col-span-2 flex justify-center md:col-span-2 md:col-start-4 lg:col-span-1">
-                  <img
-                    className="h-12"
-                    src="https://tailwindui.com/img/logos/workcation-logo-gray-400.svg"
-                    alt="Workcation"
-                  />
-                </div>
+              <div className="container flex justify-around flex-wrap">
+                <img className="h-14 m-8" src={c1} alt="Beyer" />
+                <img className="h-14 m-8" src={c2} alt="Sc saúde" />
+                <img className="h-14 m-8" src={c3} alt="Prestomed" />
+                <img className="h-14 m-8" src={c4} alt="Unimed" />
+                <img className="h-14 m-8" src={c5} alt="boavida" />
+                <img className="h-14 m-8" src={c6} alt="postal saúde" />
+                <img className="h-14 m-8" src={c7} alt="clinipam" />
+                <img className="h-14 m-8" src={c8} alt="saúde caixa" />
+                <img className="h-14 m-8" src={c9} alt="bradesco saúde" />
+                <img className="h-14 m-8" src={c10} alt="geap saúde" />
+                <img className="h-14 m-8" src={c11} alt="cassi" />
+                <img className="h-14 m-8" src={c12} alt="renal vida" />
+                <img className="h-14 m-8" src={c13} alt="amo" />
+                <img className="h-14 m-8" src={c14} alt="ammvi" />
               </div>
             </div>
           </div>
         </div>
       </main>
 
-      <CTABanner />
+      <div id="atendimento">
+        <CTABanner />
+      </div>
 
       {/* HISTÓRIAS QUE INSPIRAM */}
       <div
         id="inspiring-histories"
-        className="relative bg-white-50 pt-16 pb-20 lg:pt-24 lg:pb-28 lg:px-8"
+        className="container mx-auto relative bg-white-50 pt-16 pb-20 lg:pt-24 lg:pb-28 lg:px-8"
       >
-        <div className="absolute inset-0">
-          <div className="bg-white h-1/3 sm:h-2/3" />
-        </div>
-        <VideosSection>
-          <VSHeader>
-            <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
-              Histórias que inspiram
-            </h2>
-          </VSHeader>
-          <VSContent>
-            {blogVideos.map((item) => (
-              <BlogCard
-                imageProps={item.imageProps}
-                title={item.title}
-                ctaTitle={item.ctaTitle}
-                ctaOnClick={item.ctaOnClick}
-                description={item.description}
-                onClick={() => {
-                  console.log(showVideoModal, currentVideoUrlModal)
-                  setShowVideoModal(true)
-                  setCurrentVideoUrlModal(item.videoUrl)
-                }}
+        <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
+          Histórias que inspiram
+        </h2>
+        <div className="flex justify-start">
+          <div className="flex-1 py-8 pr-8">
+            <h3 className="font-bold text-2xl pb-4 text-gray-900">Um grande dia para o Gui!!</h3>
+            <p className="text-lg py-4 pr-8 text-gray-500">
+              Veja em detalhes como o Hospital dos olhos Freitag ajudou a fazer da vida do pequeno
+              Gui uma vida mais alegre, com mais oportunidades para transformar o futuro da nossa
+              sociedade!
+            </p>
+            <Button onClick={() => openWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}>Fale conosco</Button>
+          </div>
+          <div className="relative flex-1">
+            <div className={`${showSocialProof ? '' : 'hidden'}`}>
+              <YoutubeVideo
+                src={`https://www.youtube.com/embed/mIHpNy1l9VE?controls=0${
+                  showSocialProof ? '&autoplay=1' : ''
+                }`}
               />
-            ))}
-          </VSContent>
-        </VideosSection>
+            </div>
+            <div className={`${showSocialProof ? 'hidden' : ''}`}>
+              <img className="object-cover rounded-lg" src={socialproof} alt="prova social" />
+              <button type="button" onClick={() => setShowSocialProof(true)}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="absolute top-36 left-64 h-16 w-16 fill-current text-blue-400 hover:text-blue-500"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <CTABanner />
-      {/* PLANOS */}
-      {/* {mainProjects.map((item) => (
-        <CTAImageContent
-          key={item.imageTitle}
-          imageSrc={item.imageSrc}
-          imageAlt={item.imageAlt}
-          imageTitle={item.imageTitle}
-          label={item.label}
-          description={item.description}
-          ctaTitle={item.ctaTitle}
-          ctaTitle2={item.ctaTitle2}
-          ctaHref={item.ctaHref}
-          ctaHref2={item.ctaHref2}
-        />
-      ))} */}
-
-      {/* MAIS PLANOS */}
-      {/* <CTAContentImageSection title="Veja mais projetos para a sua vida">
-        {projects.map((item) => (
-          <CTAContentImage
-            key={item.titleImage}
-            titleImage={item.titleImage}
-            paragraph={item.paragraph}
-            ctaTitle={item.ctaTitle}
-            ctaOnClick={item.ctaOnClick}
-            image={item.image}
-          />
-        ))}
-      </CTAContentImageSection> */}
-      {/* ABSOLUTE MODAL VIDEO */}
-      {/* {showVideoModal && (
-        <div className="fixed inset-0 p-2 z-10" onClick={() => setShowVideoModal(false)}>
-          <div className="overflow-hidden flex items-center justify-center">
-            <div className="rounded-lg shadow-md  p-5 w-5/5 md:w-3/5 bg-white mt-32">
-              <YoutubeVideo src={currentVideoUrlModal} />
-            </div>
-          </div>
-        </div>
-      )} */}
-      <div className="flex flex-col items-center mt-4">
+      <div className="flex flex-col items-center mt-14" id="unidades">
         <div className="w-full bg-white rounded overflow-x-hidden flex snap-x">
-          <div
-            className="flex flex-col snap-start w-full h-full flex items-center justify-center flex-shrink-0"
+          <Place
             id="slide-1"
-          >
-            <div>
-              <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
-                Nossas Unidades
-              </h2>
-            </div>
-            <div className="flex shadow-lg m-4">
-              <div className="flex justify-end p-4">
-                <img
-                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
-                  className="h-72 w-96"
-                  alt="location"
-                />
-              </div>
-              <div className="flex flex-col p-4 justify-center">
-                <h1 className="text-2xl font-bold text-gray-700 mb-4">
-                  Laboratório Freitag & Weingärtner
-                </h1>
-                <p className="text-lg font-medium text-gray-700 mb-2">
-                  Endereço: R. Aracajú, 78 - Centro, Timbó - SC, 89120-000
-                </p>
-                <p className="text-lg font-medium text-gray-700 mb-2">Telefone: (47) 333225588</p>
-                <p className="text-lg font-medium text-gray-700 mb-2">whatsapp: (47) 988665544</p>
-                <a href="#" className="text-lg font-medium text-blue-500">
-                  Ver no mapa
-                </a>
-              </div>
-            </div>
-          </div>
-          <div
-            className="flex flex-col snap-start w-full h-full flex items-center justify-center flex-shrink-0"
+            title="Hospital de Olhos Freitag - Timbó"
+            description="Endereço: R. Germano Brandes Sênior, 726 - Centro, Timbó - SC"
+            description2="Ref: Ao lado do Hospital Oase"
+            contact="Telefone: (47) 3382-0266"
+            contact2="Whatsapp: (47) 99262-6100"
+            contactUrl="https://wa.me/5547992626100"
+            urlmap="https://www.google.com/maps/place/Hospital+de+Olhos+Freitag/@-26.8265823,-49.272391,15z/data=!4m5!3m4!1s0x0:0xbc5d7dec96d3936c!8m2!3d-26.8265311!4d-49.272286"
+          />
+          <Place
             id="slide-2"
-          >
-            <div>
-              <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
-                Nossas Unidades
-              </h2>
-            </div>
-
-            <div className="flex shadow-lg m-4">
-              <div className="flex justify-end p-4">
-                <img
-                  src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
-                  className="h-72 w-96"
-                  alt="location"
-                />
-              </div>
-              <div className="flex flex-col p-4 justify-center">
-                <h1 className="text-2xl font-bold text-gray-700 mb-4">
-                  Academia Cultural de Timbó
-                </h1>
-                <p className="text-lg font-medium text-gray-700 mb-2">
-                  Endereço: R. Aracajú, 78 - Centro, Timbó - SC, 89120-000
-                </p>
-                <p className="text-lg font-medium text-gray-700 mb-2">Telefone: (47) 333225588</p>
-                <p className="text-lg font-medium text-gray-700 mb-2">whatsapp: (47) 988665544</p>
-                <a href="#" className="text-lg font-medium text-blue-500">
-                  Ver no mapa
-                </a>
-              </div>
-            </div>
-          </div>
+            title="Hospital de Olhos Freitag - Benedito Novo"
+            description="Endereço: Rua Quirino Longo, 300 - Centro, Benedito Novo - SC"
+            description2="Ref: Anexo ao Hospital São Benedito"
+            contact="Telefone: (47) 3382-0266"
+            contact2="Whatsapp: (47) 99262-6100"
+            contactUrl="https://wa.me/5547992626100"
+            urlmap="https://www.google.com/maps/place/R.+Quirino+Longo,+300+-+Centro,+Benedito+Novo+-+SC,+89124-000/@-26.7820527,-49.3648838,17z/data=!4m5!3m4!1s0x94def80889b565a3:0x1df98072b912c294!8m2!3d-26.7820527!4d-49.3626951"
+          />
+          <Place
+            id="slide-3"
+            title="Hospital de Olhos Freitag - Apiúna"
+            description="Endereço: Rua Rio de Janeiro, 57, Apiúna - SC"
+            description2="Ref: Próximo ao posto Mime"
+            contact="Telefone: (47) 99175-2857"
+            contact2="Whatsapp: (47) 99175-2857"
+            contactUrl="https://wa.me/5547991752857"
+            urlmap="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+57,+Api%C3%BAna+-+SC,+89135-000/@-27.0381848,-49.3933441,17z/data=!3m1!4b1!4m5!3m4!1s0x94dfa9bdb72fcb25:0xd80e0d170f09232a!8m2!3d-27.0381848!4d-49.3911554"
+          />
         </div>
 
         <div className="flex mt-8">
           <a
-            className="w-8 mr-1 h-8 text-gray-100 rounded-full bg-blue-500 flex justify-center items-center"
+            className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
             href="#slide-1"
           >
-            1
+            timbó
           </a>
           <a
-            className="w-8 mr-1 h-8 text-gray-100 rounded-full bg-blue-500 flex justify-center items-center"
+            className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
             href="#slide-2"
           >
-            2
+            benedito novo
+          </a>
+          <a
+            className="mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center"
+            href="#slide-3"
+          >
+            apiúna
           </a>
         </div>
       </div>
@@ -1019,5 +667,44 @@ const Index = () => {
     </div>
   )
 }
+const Place = ({ id, title, description, description2, contact, contact2, contactUrl, urlmap }) => (
+  <div
+    className="flex flex-col snap-start w-full h-full flex items-center justify-center flex-shrink-0"
+    id={id}
+  >
+    <div>
+      <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
+        Nossas Unidades
+      </h2>
+    </div>
+
+    <div className="flex shadow-lg m-4">
+      <div className="flex justify-end p-4">
+        <img
+          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
+          className="h-72 w-96"
+          alt="location"
+        />
+      </div>
+      <div className="flex flex-col p-4 justify-center">
+        <h1 className="text-2xl font-bold text-gray-700 mb-4">{title}</h1>
+        <p className="text-lg font-medium text-gray-700 mb-2">{description}</p>
+        <p className="text-lg text-gray-700 mb-2">{description2}</p>
+        <p className="text-lg text-gray-700 mb-2">{contact}</p>
+        <a
+          href={contactUrl}
+          className="text-lg text-gray-700 mb-2"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {contact2}
+        </a>
+        <a href={urlmap} className="text-lg text-blue-400" target="_blank" rel="noreferrer">
+          Ver no mapa
+        </a>
+      </div>
+    </div>
+  </div>
+)
 
 export default Index
