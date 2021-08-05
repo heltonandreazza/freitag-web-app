@@ -34,7 +34,8 @@ const CTA_WA_MESSAGES = {
   headerTopCta: '1. Ola, estive no site e gostaria de contatar vcs!',
 }
 
-const getWhatsUrl = (text, url) => encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
+const getWhatsUrl = (text, url) =>
+  encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
 const openWhatsUrl = (text) => window.open(getWhatsUrl(text), '_blank')
 const YoutubeVideo = ({ src }) => (
   <iframe
@@ -353,7 +354,7 @@ const Index = () => {
               <button type="button" onClick={() => setShowSocialProof(true)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute top-36 left-64 h-16 w-16 fill-current text-blue-400 hover:text-blue-500"
+                  className="absolute top-36 left-64 2xl:top-44 2xl:left-80 h-16 w-16 fill-current text-blue-400 hover:text-blue-500"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >

@@ -1,5 +1,10 @@
 import React from 'react'
 import banner from '../assets/banner.png'
+import alexandre from '../assets/alexandre.png'
+import vinicius from '../assets/vinicius.png'
+import bruna from '../assets/bruna.png'
+import mauricio from '../assets/mauricio.png'
+import lucas from '../assets/lucas.png'
 import Footer from '../components/Footer'
 import Navigator from '../components/Navigator'
 import '../styles/global.css'
@@ -21,27 +26,92 @@ const Check = () => (
   </svg>
 )
 
-const Colaborador = ({ name, desc, items, reverse }) => (
+const Colaborador = ({ name, desc, items, reverse, image }) => (
   <div className={`shadow flex ${reverse ? 'flex-row-reverse' : ''}`}>
-    <div className="h-80 w-1/3">
-      <img className="h-full w-full object-cover" src={banner} alt="médico 1" />
+    <div className="h-full w-1/3 2xl:w-1/4">
+      <img className="h-full w-full object-cover" src={image} alt="médico 1" />
     </div>
-    <div className="h-80 w-2/3 px-12 py-8">
-      <h2 className="text-4xl font-bold text-gray-700">Dr. Helton Andreazza</h2>
-      <p className="text-lg font-medium text-gray-600 py-2">
-        esse é o médico esse é o médico esse é o médico esse é o médico esse é o médico esse é o
-      </p>
-      {items.map((item) => (
-        <p className="flex text-lg font-medium text-gray-500">
-          <span className="pr-4">
-            <Check />
-          </span>
-          <span>{item}</span>
-        </p>
-      ))}
+    <div className="h-full w-2/3 2xl:w-3/4 px-10 pt-10">
+      <h2 className="text-4xl font-bold text-gray-700">{name}</h2>
+      <p className="text-lg font-medium text-gray-600 py-2">{desc}</p>
+      <div className="pt-4">
+        {items.map((item) => (
+          <p className="flex text-lg font-medium text-gray-500 py-1">
+            <span className="pr-4">
+              <Check />
+            </span>
+            <span>{item}</span>
+          </p>
+        ))}
+      </div>
     </div>
   </div>
 )
+
+const team = [
+  {
+    name: 'Dr. Alexandre Rocha Freitag',
+    desc: 'O Dr. Alexandre Rocha Freitag é fundador e diretor técnico do HOF.',
+    items: [
+      'Especialista em Estrabismo e lentes de contato',
+      'Graduado em Medicina pela Universidade Federal de Santa Maria com Residência Médica em Oftalmologia.',
+      'Ganhou título de Especialista em Oftalmologia pela Associação Médica Brasileira (AMB) e pelo Conselho Brasileiro de Oftalmologia – CBO.',
+      'É Membro Titular do Conselho Brasileiro de Oftalmologia (CBO).',
+      'É Membro Titular da Sociedade Brasileira de Oftalmologia (SBO).',
+      'O Dr. Alexandre atende na unidade HOF - Timbó.',
+    ],
+    image: alexandre,
+  },
+  {
+    name: 'Dr. Vinicius R. Joner',
+    desc:
+      'O Dr. Vinicius R. Joner realiza cirurgias e é especialista em Catarata e lentes de contato!',
+    items: [
+      'Graduado em Medicina pela Universidade Federal de Pelotas/UFPel-RS, realizou residência Médica em Oftalmologia no Hospital de Olhos do Blumenau.',
+      'Membro do Conselho Brasileiro de Oftalmologia (CBO).',
+      'Membro da Sociedade Brasileira de Catarata e Implantes Intraoculares.',
+      'Membro da Sociedade Brasileira de Cirurgia Refrativa.',
+      'O Dr. Vinicius atende na unidades HOF - Timbó, Benedito Novo e Apiúna.',
+    ],
+    image: vinicius,
+  },
+  {
+    name: 'Dra. Bruna G. Rohlfs',
+    desc: 'A Dra. Bruna G. Rohlfs é especialista em Glaucoma aqui no HOF!',
+    items: [
+      'Fellowship em Glaucoma clínico e cirúrgico no Centro Oftalmológico de Minas Gerais (COMG).',
+      'Especializada em Oftalmologia pelo Instituto de Olhos Ciências Médicas (IOCM).',
+      'Graduada em Medicina pela Faculdade de Medicina da Universidade Federal de Minas Gerais (UFMG).',
+      'Realizou estágio multidisciplinar em cirurgias no Hospital São Sebastião – Santa Maria da Feira – Portugal.',
+      'A Dra. Bruna atende na unidades HOF - Timbó, Benedito Novo, Apiúna e Indaial.',
+    ],
+    image: bruna,
+  },
+  {
+    name: 'Dr. Lucas H. Leitis',
+    desc: 'O Dr. Lucas H. Leitis é especialista em retina aqui no HOF!',
+    items: [
+      'O Dr. Lucas é Graduado pela Universidade Regional de Blumenau.',
+      'Realizou a especialização em retina clínica pelo Hospital de Olhos do Paraná.',
+      'Realizou a especialização em retina clínica pelo Hospital de olhos Sadalla Amin Ghanem.',
+      'Realizou a especialização cirúrgica em retina e vítreo pelo Hospital de Olhos do Paraná.',
+      'Residência médica em oftalmologia pelo Hospital de Olhos de Blumenau!',
+      'O Dr. Lucas atende na unidade HOF - Timbó.',
+    ],
+    image: lucas,
+  },
+  {
+    name: 'Dr. Mauricio C. Munareto',
+    desc: 'O Dr. Mauricio C. Munareto é especialista em catarata aqui no HOF!',
+    items: [
+      'Especialista em oftalmologia (Clínica e cirurgica) pelo MEC desde 2018 (Hospital de olho de Blumenau).',
+      'Membro da Soblec - Sociedade Brasileira de Lente de Contato.',
+      'Membro da BRASCS - Associação Brasileira de Catarata e Cirurgia Refrativa - Brazilian Association of Cataract and Refractive Surgery.',
+      'O Dr. Mauricio atende na unidade HOF - Timbó.',
+    ],
+    image: mauricio,
+  },
+]
 
 const Equipe = () => (
   <div>
@@ -52,43 +122,15 @@ const Equipe = () => (
         <img className="h-full w-full object-cover" src={banner} alt="banner" />
         <h1 className="absolute text-6xl text-bold text-gray-700 text-center">EQUIPE MÉDICA</h1>
       </div>
-      <Colaborador
-        name="Dr. Helton Andreazza"
-        desc="esse é o médico esse é o médico esse é o médico esse é o médico esse é o médico esse é o"
-        items={[
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-        ]}
-      />
-      <Colaborador
-        reverse
-        name="Dr. Helton Andreazza"
-        desc="esse é o médico esse é o médico esse é o médico esse é o médico esse é o médico esse é o"
-        items={[
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-        ]}
-      />
-      <Colaborador
-        name="Dr. Helton Andreazza"
-        desc="esse é o médico esse é o médico esse é o médico esse é o médico esse é o médico esse é o"
-        items={[
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-          'item item item item item item item item item item',
-        ]}
-      />
+      {team.map(({ name, desc, items, image }, index) => (
+        <Colaborador
+          name={name}
+          desc={desc}
+          items={items}
+          image={image}
+          reverse={index % 2 !== 0}
+        />
+      ))}
     </main>
     <Footer />
   </div>
