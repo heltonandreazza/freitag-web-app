@@ -161,26 +161,7 @@ const Specialties = () => (
             Nossas especialidades
           </h2>
           <div className="mt-8 grid grid-cols-2 gap-2 lg:mt-0">
-            <div className="col-span-2 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/6 stroke-current text-gray-400"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-                />
-              </svg>
-              <h3 className="w-5/6 max-h-12 text-xl text-gray-400 text-center">
-                Facectomia com implante intraocular (Catarata)
-              </h3>
-            </div>
-            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-12 w-1/5 stroke-current text-gray-400"
@@ -196,10 +177,10 @@ const Specialties = () => (
                 />
               </svg>
               <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
-                Exérese de Xantelasma
+                Cirurgia de catarata
               </h3>
             </div>
-            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-12 w-1/5 stroke-current text-gray-400"
@@ -215,10 +196,10 @@ const Specialties = () => (
                 />
               </svg>
               <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
-                Exérese de Tumoração
+                Transplante de córnea
               </h3>
             </div>
-            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-12 w-1/5 stroke-current text-gray-400"
@@ -234,10 +215,29 @@ const Specialties = () => (
                 />
               </svg>
               <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
-                Cirurgia Refrativa
+                Cirurgia de pterígio
               </h3>
             </div>
-            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Cirurgia de estrabismo
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-12 w-1/5 stroke-current text-gray-400"
@@ -254,25 +254,139 @@ const Specialties = () => (
               </svg>
               <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">Crosslinking</h3>
             </div>
-          </div>
-          <div className="col-span-2 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-12 w-1/6 stroke-current text-gray-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
-              />
-            </svg>
-            <h3 className="w-5/6 max-h-12 text-xl text-gray-400 text-center">
-              Exérese de Pterigio com autotransplante conjuntival
-            </h3>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Capsulotomia YAG Laser
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Injeção intravítrea
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Tratamento do ceratocone
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Cirurgia refrativa (correção do grau)
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Implante de anel intra-estromal
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Cirurgia plástica oftalmológica
+              </h3>
+            </div>
+            <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Cirurgia de vias lacrimais
+              </h3>
+            </div>
           </div>
         </div>
         <div className="relative mx-auto w-full shadow-lg mt-0">

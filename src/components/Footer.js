@@ -9,7 +9,8 @@ const URLS = {
   playstore: '',
   appstore: '',
 }
-const getWhatsUrl = (text, url) => encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
+const getWhatsUrl = (text, url) =>
+  encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
 
 const CTA_WA_MESSAGES = {
   headerTopCta: '1. Ola, estive no site e gostaria de contatar vcs!',
@@ -128,12 +129,6 @@ const Footer = () => (
                 Legal
               </h3>
               <ul className="mt-4 space-y-4">
-                <li>
-                  <a href="#" className="text-base text-gray-400 hover:text-gray-900">
-                    Termos de uso
-                  </a>
-                </li>
-
                 <li>
                   <a href="#" className="text-base text-gray-400 hover:text-gray-900">
                     Políticas de privacidade
