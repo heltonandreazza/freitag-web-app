@@ -16,6 +16,8 @@ import c6 from '../assets/c6.png'
 import c7 from '../assets/c7.png'
 import c8 from '../assets/c8.png'
 import c9 from '../assets/c9.png'
+import ceo from '../assets/ceo.png'
+import unidadeTimbo from '../assets/unidade_timbo.jpeg'
 import socialproof from '../assets/socialproof.png'
 import Footer from '../components/Footer'
 import Navigator from '../components/Navigator'
@@ -34,8 +36,7 @@ const CTA_WA_MESSAGES = {
   headerTopCta: '1. Ola, estive no site e gostaria de contatar vcs!',
 }
 
-const getWhatsUrl = (text, url) =>
-  encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
+const getWhatsUrl = (text, url) => encodeURI(`${url || URLS.whatsapp}${text ? `?text=${text}` : ''}`)
 const openWhatsUrl = (text) => window.open(getWhatsUrl(text), '_blank')
 const YoutubeVideo = ({ src }) => (
   <iframe
@@ -159,92 +160,134 @@ const Specialties = () => (
           <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-8">
             Nossas especialidades
           </h2>
-          <p className="mt-3 max-w-3xl text-lg text-gray-400 mb-8">
-            Com uma equipe médica de alta capacidade, atendemos as mais diversas especialidades para
-            você!
-          </p>
-          <div className="mt-8 grid grid-cols-3 gap-2 lg:mt-0">
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/transistor-logo-gray-400.svg"
-                alt="Workcation"
-              />
+          <div className="mt-8 grid grid-cols-2 gap-2 lg:mt-0">
+            <div className="col-span-2 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/6 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-5/6 max-h-12 text-xl text-gray-400 text-center">
+                Facectomia com implante intraocular (Catarata)
+              </h3>
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/mirage-logo-gray-400.svg"
-                alt="Mirage"
-              />
+            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Exérese de Xantelasma
+              </h3>
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/tuple-logo-gray-400.svg"
-                alt="Tuple"
-              />
+            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Exérese de Tumoração
+              </h3>
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
-              />
+            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+                Cirurgia Refrativa
+              </h3>
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
+            <div className="col-span-1 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-12 w-1/5 stroke-current text-gray-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                />
+              </svg>
+              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">Crosslinking</h3>
             </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
+          </div>
+          <div className="col-span-2 flex justify-center items-center py-8 px-8 bg-gray-50 font-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-12 w-1/6 stroke-current text-gray-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
               />
-            </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/laravel-logo-gray-400.svg"
-                alt="Laravel"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statickit-logo-gray-400.svg"
-                alt="StaticKit"
-              />
-            </div>
-            <div className="col-span-1 flex justify-center py-8 px-8 bg-gray-50">
-              <img
-                className="max-h-12"
-                src="https://tailwindui.com/img/logos/statamic-logo-gray-400.svg"
-                alt="Statamic"
-              />
-            </div>
+            </svg>
+            <h3 className="w-5/6 max-h-12 text-xl text-gray-400 text-center">
+              Exérese de Pterigio com autotransplante conjuntival
+            </h3>
           </div>
         </div>
         <div className="relative mx-auto w-full shadow-lg mt-0">
-          <YoutubeVideo src="https://www.youtube.com/embed/9oFQzvPUzeU?controls=0" />
+          <img src={ceo} alt="ceo" />
           <p className="px-8 pb-6 pt-8 max-w-3xl text-justify text-lg text-bold text-gray-900">
-            Maiquel Zafanelli - CEO
+            Dr. Alexandre Rocha Freitag - Fundador
           </p>
           <p className="px-8 pb-2 max-w-3xl text-justify text-md text-gray-400">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et, egestas tempus tellus etiam
-            sed. Quam a scelerisque amet ullamcorper eu enim et fermentum, augue.
+            O Dr. Alexandre Rocha Freitag é fundador e diretor técnico do HOF. Ganhou título de
+            Especialista em Oftalmologia pela Associação Médica Brasileira (AMB) e pelo Conselho
+            Brasileiro de Oftalmologia – CBO. É Membro Titular do Conselho Brasileiro de
+            Oftalmologia (CBO). É Membro Titular da Sociedade Brasileira de Oftalmologia (SBO).
           </p>
           <p className="px-8 pb-8">
-            <a
-              href={URLS.playstore}
-              target="_blank"
-              className="font-medium text-blue-400 underline"
-              rel="noreferrer"
-            >
+            <a href="/equipe" className="font-medium text-blue-400 underline" rel="noreferrer">
               Mais sobre a equipe
             </a>
           </p>
@@ -372,7 +415,7 @@ const Index = () => {
 
       <CTABanner />
       <div className="flex flex-col items-center mt-14" id="unidades">
-        <div className="w-full bg-white rounded overflow-x-hidden flex snap-x">
+        <div id="unidades" className="w-full bg-white rounded overflow-x-hidden flex snap-x">
           <Place
             id="slide-1"
             title="Hospital de Olhos Freitag - Timbó"
@@ -382,6 +425,7 @@ const Index = () => {
             contact2="Whatsapp: (47) 99262-6100"
             contactUrl="https://wa.me/5547992626100"
             urlmap="https://www.google.com/maps/place/Hospital+de+Olhos+Freitag/@-26.8265823,-49.272391,15z/data=!4m5!3m4!1s0x0:0xbc5d7dec96d3936c!8m2!3d-26.8265311!4d-49.272286"
+            src={unidadeTimbo}
           />
           <Place
             id="slide-2"
@@ -392,6 +436,7 @@ const Index = () => {
             contact2="Whatsapp: (47) 99168-9605"
             contactUrl="https://wa.me/5547991689605"
             urlmap="https://www.google.com/maps/place/Rua+Marechal+Deodoro+da+Fonseca,+1025+-+Tapaj%C3%B3s,+Indaial+-+SC,+89130-000/@-26.9008823,-49.2433544,17z/data=!3m1!4b1!4m5!3m4!1s0x94df028a331fab73:0xc94877b2eea8b0c1!8m2!3d-26.9008823!4d-49.2411657"
+            src={unidadeTimbo}
           />
           <Place
             id="slide-3"
@@ -402,6 +447,7 @@ const Index = () => {
             contact2="Whatsapp: (47) 99262-6100"
             contactUrl="https://wa.me/5547992626100"
             urlmap="https://www.google.com/maps/place/R.+Quirino+Longo,+300+-+Centro,+Benedito+Novo+-+SC,+89124-000/@-26.7820527,-49.3648838,17z/data=!4m5!3m4!1s0x94def80889b565a3:0x1df98072b912c294!8m2!3d-26.7820527!4d-49.3626951"
+            src={unidadeTimbo}
           />
           <Place
             id="slide-4"
@@ -412,6 +458,7 @@ const Index = () => {
             contact2="Whatsapp: (47) 99175-2857"
             contactUrl="https://wa.me/5547991752857"
             urlmap="https://www.google.com/maps/place/R.+Rio+de+Janeiro,+57,+Api%C3%BAna+-+SC,+89135-000/@-27.0381848,-49.3933441,17z/data=!3m1!4b1!4m5!3m4!1s0x94dfa9bdb72fcb25:0xd80e0d170f09232a!8m2!3d-27.0381848!4d-49.3911554"
+            src={unidadeTimbo}
           />
         </div>
 
@@ -446,7 +493,17 @@ const Index = () => {
     </div>
   )
 }
-const Place = ({ id, title, description, description2, contact, contact2, contactUrl, urlmap }) => (
+const Place = ({
+  id,
+  title,
+  description,
+  description2,
+  contact,
+  contact2,
+  contactUrl,
+  urlmap,
+  src,
+}) => (
   <div
     className="flex flex-col snap-start w-full h-full flex items-center justify-center flex-shrink-0"
     id={id}
@@ -459,11 +516,7 @@ const Place = ({ id, title, description, description2, contact, contact2, contac
 
     <div className="flex shadow-lg m-4">
       <div className="flex justify-end p-4">
-        <img
-          src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80"
-          className="h-72 w-96"
-          alt="location"
-        />
+        <img src={src} className="h-72 w-96" alt="location" />
       </div>
       <div className="flex flex-col p-4 justify-center">
         <h1 className="text-2xl font-bold text-gray-700 mb-4">{title}</h1>
