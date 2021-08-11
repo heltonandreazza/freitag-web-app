@@ -47,10 +47,7 @@ const Blog = ({ data, pageContext }) => {
             ))}
           </BlogCategories>
         </div>
-        <BlogColunCards
-          title="Postagens mais recentes"
-          description="Saúde, disposição, felicidade e muito mais."
-        >
+        <BlogColunCards title="Postagens mais recentes">
           {data.posts.edges.slice(0, 3).map(({ node }) => (
             <BlogColunCardsItem
               title={node.title}

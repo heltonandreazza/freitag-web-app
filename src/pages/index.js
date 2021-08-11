@@ -205,11 +205,7 @@ const Index = () => {
           </a>
         </div>
       </div>
-      <BlogColunCards
-        title="Postagens mais recentes"
-        description="Saúde, disposição, felicidade e muito mais. Acesse o nosso Blog!"
-        href="\blog"
-      >
+      <BlogColunCards title="Postagens mais recentes" href="\blog">
         {data.posts.edges.slice(0, 3).map(({ node }) => (
           <BlogColunCardsItem
             title={node.title}
