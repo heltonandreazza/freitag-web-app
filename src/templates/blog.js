@@ -23,12 +23,12 @@ const Blog = ({ data, pageContext }) => {
       />
       <main>
         <div className={`${pageContext.currentPage <= 0 ? '' : 'hidden'} mx-4 2xl:mx-80`}>
-          <div className="relative container mx-auto bg-blue-500 flex items-center justify-between border border-transparent ">
+          <div className="relative container mx-auto flex items-center justify-between border border-transparent ">
             <h1 className="absolute left-14 top-16 text-xl sm:text-4xl text-white  font-bold pb-2">
               Dicas e conteúdos exclusivos
             </h1>
             <h1 className="absolute left-14 top-28 text-xl sm:text-4xl text-white font-bold pb-2">
-              com os nossos professores!
+              com a nossa equipe!
             </h1>
             <p className="absolute left-14 top-40 text-lg sm:text-xl text-white font-medium py-2">
               Compartilhe saúde com seus amigos!

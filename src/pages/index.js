@@ -16,7 +16,7 @@ import YoutubeVideo from '../components/YoutubeVideo'
 import '../styles/global.css'
 import { getWhatsUrl, openWhatsUrl } from '../utils'
 import { CTA_WA_MESSAGES } from '../utils/constants'
-import staticData from './staticData'
+import staticData from '../utils/staticData'
 
 const { convenios, places, specialties } = staticData
 const POSTS_QUERY = graphql`

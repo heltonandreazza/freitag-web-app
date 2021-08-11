@@ -46,7 +46,7 @@ const Author = ({ author }) => (
               className="absolute inset-0 h-full w-full object-cover"
               image={author.image.gatsbyImageData}
             />
-            <div className="relative px-8 pt-72 pb-8">
+            <div className="relative px-8 pt-64 pb-8">
               <blockquote className="mt-8">
                 <div className="relative text-lg font-medium text-white md:flex-grow">
                   <svg
@@ -62,8 +62,11 @@ const Author = ({ author }) => (
 
                 <footer className="mt-4">
                   <p className="text-base font-semibold text-blue-200">
-                    {author.name},{author.role} no Hospital de Olhos Freitag
-                  </p>
+                    {author.name}
+                    ,{author.role}
+                    {' '}
+                    no Hospital de Olhos Freitag
+</p>
                 </footer>
               </blockquote>
             </div>
@@ -112,9 +115,9 @@ const Author = ({ author }) => (
           </dl>
           <div className="mt-10">
             <a href="/authors" className="text-base font-medium text-blue-400 hover:text-blue-500">
-              Conheça a nossa equipe
-              {' '}
-              <span aria-hidden="true">&rarr;</span>
+              Conheça a nossa equipe 
+{' '}
+<span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </div>
