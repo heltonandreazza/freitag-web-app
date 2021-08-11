@@ -20,7 +20,6 @@ const Navigator = () => (
         <div className="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
-              <span className="sr-only">Workflow</span>
               <img className="h-20" src={logo} alt="logo" />
             </a>
           </div>
@@ -84,7 +83,7 @@ const Navigator = () => (
             <a
               key={item.name}
               href={item.href}
-              className="text-base font-medium text-gray-400 hover:text-blue-400"
+              className="hidden md:flex text-base font-medium text-gray-400 hover:text-blue-400"
             >
               {item.name}
             </a>

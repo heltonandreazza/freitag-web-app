@@ -137,13 +137,11 @@ const BlogCard = ({
 
 const CTABanner = () => (
   <div className="flex py-8 bg-blue-50 ">
-    <div className="flex-1 px-4">
-      <div className="flex justify-end">
-        <ClockIcon className="h-40 w-40 text-blue-400" />
-      </div>
+    <div className="hidden sm:flex flex-1 px-4 justify-end">
+      <ClockIcon className="h-40 w-40 text-blue-400" />
     </div>
     <div className="flex-1 px-4 ng-blue-400">
-      <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+      <h2 className="text-center sm:text-left text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         <span className="block text-blue-400 mb-2">Consultas e Exames</span>
         <span className="block mb-2">(47) 99262-6100</span>
         <Button onClick={() => openWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}>Fale conosco</Button>
@@ -164,7 +162,7 @@ const Specialties = () => (
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -176,14 +174,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Cirurgia de catarata
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -195,14 +193,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Transplante de córnea
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -214,14 +212,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Cirurgia de pterígio
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -233,14 +231,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Cirurgia de estrabismo
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -252,12 +250,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">Crosslinking</h3>
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
+                Crosslinking
+              </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -269,14 +269,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Capsulotomia YAG Laser
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -288,14 +288,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Injeção intravítrea
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -307,14 +307,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Tratamento do ceratocone
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -326,14 +326,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
-                Cirurgia refrativa (correção do grau)
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
+                Cirurgia refrativa
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -345,14 +345,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Implante de anel intra-estromal
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -364,14 +364,14 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Cirurgia plástica oftalmológica
               </h3>
             </div>
             <div className="col-span-1 flex justify-center items-center p-4 bg-gray-50 font-bold">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-12 w-1/5 stroke-current text-gray-400"
+                className="hidden sm:flex h-12 w-1/5 stroke-current text-gray-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -383,13 +383,13 @@ const Specialties = () => (
                   d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
                 />
               </svg>
-              <h3 className="w-4/5 max-h-12 text-xl text-gray-400 text-center">
+              <h3 className="text-md w-5/5 sm:w-4/5 max-h-12 sm:text-xl text-gray-400 text-center">
                 Cirurgia de vias lacrimais
               </h3>
             </div>
           </div>
         </div>
-        <div className="relative mx-auto w-full shadow-lg mt-0">
+        <div className="relative mx-auto w-full shadow-lg mt-8 sm:mt-0">
           <img src={ceo} alt="ceo" />
           <p className="px-8 pb-6 pt-8 max-w-3xl text-justify text-lg text-bold text-gray-900">
             Dr. Alexandre Rocha Freitag - Fundador
@@ -488,11 +488,11 @@ const Index = () => {
         <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 px-4 sm:text-4xl md:px-0">
           Histórias que inspiram
         </h2>
-        <div className="flex justify-start">
-          <div className="flex-1 py-8 pr-8">
+        <div className="flex flex-col sm:flex-row justify-start">
+          <div className="text-center sm:text-left flex-1 py-8 pr-8 px-4 sm:px-0">
             <h3 className="font-bold text-2xl pb-4 text-gray-900">Um grande dia para o Gui!!</h3>
             <p className="text-lg py-4 pr-8 text-gray-500">
-              Veja em detalhes como o Hospital dos olhos Freitag ajudou a fazer da vida do pequeno
+              Veja em detalhes como o Hospital de olhos Freitag ajudou a fazer da vida do pequeno
               Gui uma vida mais alegre, com mais oportunidades para transformar o futuro da nossa
               sociedade!
             </p>
@@ -501,17 +501,17 @@ const Index = () => {
           <div className="relative flex-1">
             <div className={`${showSocialProof ? '' : 'hidden'}`}>
               <YoutubeVideo
-                src={`https://www.youtube.com/embed/mIHpNy1l9VE?controls=0${
-                  showSocialProof ? '&autoplay=1' : ''
+                src={`https://www.youtube.com/embed/mIHpNy1l9VE${
+                  showSocialProof ? '?autoplay=1' : ''
                 }`}
               />
             </div>
-            <div className={`${showSocialProof ? 'hidden' : ''}`}>
+            <div className={`${showSocialProof ? 'hidden' : ''} pt-8`}>
               <img className="object-cover rounded-lg" src={socialproof} alt="prova social" />
               <button type="button" onClick={() => setShowSocialProof(true)}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="absolute top-36 left-64 2xl:top-44 2xl:left-80 h-16 w-16 fill-current text-blue-400 hover:text-blue-500"
+                  className="absolute top-24 left-36 sm:top-20 sm:left-28 md:top-28 md:left-40 lg:top-40 lg:left-64 2xl:top-52 2xl:left-80 h-16 w-16 fill-current text-blue-400 hover:text-blue-500"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -628,7 +628,7 @@ const Place = ({
       </h2>
     </div>
 
-    <div className="flex shadow-lg m-4">
+    <div className="flex flex-col sm:flex-row shadow-lg m-4">
       <div className="flex justify-end p-4">
         <img src={src} className="h-72 w-96" alt="location" />
       </div>
@@ -639,7 +639,7 @@ const Place = ({
         <p className="text-lg text-gray-700 mb-2">{contact}</p>
         <a
           href={contactUrl}
-          className="text-lg text-gray-700 mb-2"
+          className="text-lg text-blue-400 mb-2 underline"
           target="_blank"
           rel="noreferrer"
         >

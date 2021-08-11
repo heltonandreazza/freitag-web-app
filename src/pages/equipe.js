@@ -27,11 +27,11 @@ const Check = () => (
 )
 
 const Colaborador = ({ name, desc, items, reverse, image }) => (
-  <div className={`shadow flex ${reverse ? 'flex-row-reverse' : ''}`}>
-    <div className="h-full w-1/3 2xl:w-1/4">
+  <div className={`shadow flex flex-col md:flex-row ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div className="h-full md:w-1/3 2xl:w-1/4">
       <img className="h-full w-full object-cover" src={image} alt="médico 1" />
     </div>
-    <div className="h-full w-2/3 2xl:w-3/4 px-10 pt-10">
+    <div className="h-full md:w-2/3 2xl:w-3/4 px-10 pt-10 mb-8">
       <h2 className="text-4xl font-bold text-gray-700">{name}</h2>
       <p className="text-lg font-medium text-gray-600 py-2">{desc}</p>
       <div className="pt-4">
