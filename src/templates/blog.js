@@ -24,16 +24,16 @@ const Blog = ({ data, pageContext }) => {
       <main>
         <div className={`${pageContext.currentPage <= 0 ? '' : 'hidden'} mx-4 2xl:mx-80`}>
           <div className="relative container mx-auto flex items-center justify-between border border-transparent ">
-            <h1 className="absolute left-14 top-16 text-xl sm:text-4xl text-white  font-bold pb-2">
+            <h1 className="absolute left-14 bottom-40 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
               Dicas e conteúdos exclusivos
             </h1>
-            <h1 className="absolute left-14 top-28 text-xl sm:text-4xl text-white font-bold pb-2">
+            <h1 className="absolute left-14 bottom-28 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
               com a nossa equipe!
             </h1>
-            <p className="absolute left-14 top-40 text-lg sm:text-xl text-white font-medium py-2">
+            <p className="absolute left-14 bottom-16 text-lg sm:text-xl font-medium py-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
               Compartilhe saúde com seus amigos!
             </p>
-            <img className="h-64 w-full object-cover" src={banner} />
+            <img className="w-full object-cover" src={banner} style={{ height: '25rem' }} />
           </div>
         </div>
         <div className={`${pageContext.currentPage <= 0 ? '' : 'hidden'} mx-4 2xl:mx-80`}>

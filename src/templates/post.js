@@ -67,7 +67,7 @@ const Post = ({ data: { post, posts } = {}, path }) => {
 
   // workaround: add image from 'references' since we have an issue where
   // we dont have the file data in the embedded asset nodes
-  post.contentRich.references.forEach((ref) => {
+  post.contentRich.references?.forEach((ref) => {
     const node = contentRichJson?.content.find(
       // eslint-disable-next-line comma-dangle
       (n) => n?.data?.target?.sys?.id === ref.contentful_id
@@ -106,11 +106,6 @@ const Post = ({ data: { post, posts } = {}, path }) => {
                 {post?.title}
               </span>
             </h1>
-            <p className="mt-8 text-xl text-gray-500 leading-8">
-              Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi,
-              nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci
-              at in viverra scelerisque eget. Eleifend egestas fringilla sapien.
-            </p>
             <div>{documentToReactComponents(contentRichJson, buildOptions(path))}</div>
           </div>
         </div>
@@ -177,18 +172,6 @@ export const pageQuery = graphql`
       }
       contentRich {
         raw
-        references {
-          ... on ContentfulAsset {
-            id
-            file {
-              url
-              fileName
-              contentType
-            }
-            contentful_id
-            gatsbyImageData
-          }
-        }
       }
     }
     posts: allContentfulPost(
