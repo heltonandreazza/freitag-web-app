@@ -52,7 +52,7 @@ const Specialties = ({ specialties, src, alt }) => (
               className='font-medium text-blue-400 underline'
               rel='noreferrer'
             >
-              Mais sobre a equipe
+              Mais sobre o corpo clínico
             </a>
           </p>
         </div>

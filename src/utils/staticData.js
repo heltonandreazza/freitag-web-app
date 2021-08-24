@@ -33,7 +33,8 @@ const staticData = {
     {
       id: 'slide-1',
       title: 'Hospital de Olhos Freitag - Timbó',
-      description: 'Endereço: R. Germano Brandes Sênior, 726 - Centro, Timbó - SC',
+      description:
+        'Endereço: R. Germano Brandes Sênior, 726 - Centro, Timbó - SC',
       description2: 'Ref: Ao lado do Hospital Oase',
       contact: 'Telefone: (47) 3382-0266',
       contact2: 'Whatsapp: (47) 99262-6100',
@@ -53,19 +54,18 @@ const staticData = {
       contactUrl: 'https://wa.me/5547991689605',
       urlmap:
         'https://www.google.com/maps/place/Rua+Marechal+Deodoro+da+Fonseca,+1025+-+Tapaj%C3%B3s,+Indaial+-+SC,+89130-000/@-26.9008823,-49.2433544,17z/data=!3m1!4b1!4m5!3m4!1s0x94df028a331fab73:0xc94877b2eea8b0c1!8m2!3d-26.9008823!4d-49.2411657',
-      src: unidadeTimbo,
     },
     {
       id: 'slide-3',
       title: 'Hospital de Olhos Freitag - Benedito Novo',
-      description: 'Endereço: Rua Quirino Longo, 300 - Centro, Benedito Novo - SC',
+      description:
+        'Endereço: Rua Quirino Longo, 300 - Centro, Benedito Novo - SC',
       description2: 'Ref: Anexo ao Hospital São Benedito',
       contact: 'Telefone: (47) 3382-0266',
       contact2: 'Whatsapp: (47) 99262-6100',
       contactUrl: 'https://wa.me/5547992626100',
       urlmap:
         'https://www.google.com/maps/place/R.+Quirino+Longo,+300+-+Centro,+Benedito+Novo+-+SC,+89124-000/@-26.7820527,-49.3648838,17z/data=!4m5!3m4!1s0x94def80889b565a3:0x1df98072b912c294!8m2!3d-26.7820527!4d-49.3626951',
-      src: unidadeTimbo,
     },
     {
       id: 'slide-4',
@@ -77,7 +77,6 @@ const staticData = {
       contactUrl: 'https://wa.me/5547991752857',
       urlmap:
         'https://www.google.com/maps/place/R.+Rio+de+Janeiro,+57,+Api%C3%BAna+-+SC,+89135-000/@-27.0381848,-49.3933441,17z/data=!3m1!4b1!4m5!3m4!1s0x94dfa9bdb72fcb25:0xd80e0d170f09232a!8m2!3d-27.0381848!4d-49.3911554',
-      src: unidadeTimbo,
     },
   ],
   convenios: [

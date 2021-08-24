@@ -1,8 +1,8 @@
 export const URLS = {
   whatsapp: 'https://wa.me/5547992626100',
-  facebook: 'https://www.facebook.com/hospitaldeolhosfreitag/',
+  facebook: 'https://www.facebook.com/hospitaldeolhosfreitag',
   instagram: 'https://www.instagram.com/hospitaldeolhosfreitag/',
-  youtube: '',
+  youtube: 'https://www.youtube.com/channel/UCBcqtfGfWf5l8FKbagvEjzw',
   playstore: '',
   appstore: '',
 }

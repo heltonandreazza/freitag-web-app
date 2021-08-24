@@ -2,8 +2,12 @@ import { graphql } from 'gatsby'
 import React, { useState } from 'react'
 import banner from '../assets/banner.png'
 import BlogCards, { BlogCardsItem } from '../components/BlogCards'
-import BlogCategories, { BlogCategoriesItem } from '../components/BlogCategories'
-import BlogColunCards, { BlogColunCardsItem } from '../components/BlogColunCards'
+import BlogCategories, {
+  BlogCategoriesItem,
+} from '../components/BlogCategories'
+import BlogColunCards, {
+  BlogColunCardsItem,
+} from '../components/BlogColunCards'
 import BlogPagination from '../components/BlogPagination'
 import Footer from '../components/BlogFooter'
 import Navigator from '../components/BlogNavigator'
@@ -15,28 +19,40 @@ const Blog = ({ data, pageContext }) => {
   const pages = Array.from({ length: pageContext.numPages })
   return (
     <div>
-      <Seo title="Blog Hospital de Olhos Freitag" />
+      <Seo title='Blog Hospital de Olhos Freitag' />
       <Navigator
         onClickOpenMenuMobile={() => setShowMenuMobile(true)}
         onClickCloseMenuMobile={() => setShowMenuMobile(false)}
         showMenuMobile={showMenuMobile}
       />
       <main>
-        <div className={`${pageContext.currentPage <= 0 ? '' : 'hidden'} mx-4 2xl:mx-80`}>
-          <div className="relative container mx-auto flex items-center justify-between border border-transparent ">
-            <h1 className="absolute left-14 bottom-40 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
+        <div
+          className={`${
+            pageContext.currentPage <= 0 ? '' : 'hidden'
+          } mx-4 2xl:mx-80`}
+        >
+          <div className='relative container mx-auto flex items-center justify-between border border-transparent '>
+            <h1 className='absolute left-14 bottom-40 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300'>
               Dicas e conteúdos exclusivos
             </h1>
-            <h1 className="absolute left-14 bottom-28 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
-              com a nossa equipe!
+            <h1 className='absolute left-14 bottom-28 text-xl sm:text-4xl font-bold pb-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300'>
+              com a nosso corpo clínico!
             </h1>
-            <p className="absolute left-14 bottom-16 text-lg sm:text-xl font-medium py-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300">
+            <p className='absolute left-14 bottom-16 text-lg sm:text-xl font-medium py-2 text-shadow-lg text-transparent bg-clip-text bg-gradient-to-b from-blue-500 to-blue-300'>
               Compartilhe saúde com seus amigos!
             </p>
-            <img className="w-full object-cover" src={banner} style={{ height: '25rem' }} />
+            <img
+              className='w-full object-cover'
+              src={banner}
+              style={{ height: '25rem' }}
+            />
           </div>
         </div>
-        <div className={`${pageContext.currentPage <= 0 ? '' : 'hidden'} mx-4 2xl:mx-80`}>
+        <div
+          className={`${
+            pageContext.currentPage <= 0 ? '' : 'hidden'
+          } mx-4 2xl:mx-80`}
+        >
           <BlogCategories>
             {data.categories.edges.map(({ node }) => (
               <BlogCategoriesItem
@@ -47,7 +63,7 @@ const Blog = ({ data, pageContext }) => {
             ))}
           </BlogCategories>
         </div>
-        <BlogColunCards title="Postagens mais recentes">
+        <BlogColunCards title='Postagens mais recentes'>
           {data.posts.edges.slice(0, 3).map(({ node }) => (
             <BlogColunCardsItem
               title={node.title}
@@ -81,7 +97,10 @@ const Blog = ({ data, pageContext }) => {
             />
           ))}
         </BlogCards>
-        <BlogPagination currentPage={pageContext.currentPage} pagesLength={pages.length} />
+        <BlogPagination
+          currentPage={pageContext.currentPage}
+          pagesLength={pages.length}
+        />
       </main>
       <Footer />
     </div>
