@@ -31,22 +31,3 @@
     text-shadow: none;
   }
 }
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: lightskyblue;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: blue;
-}

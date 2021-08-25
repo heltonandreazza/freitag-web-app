@@ -60,7 +60,7 @@ const Index = () => {
   const data = useStaticQuery(POSTS_QUERY)
   const [showSocialProof, setShowSocialProof] = useState(false)
   return (
-    <div className='min-h-screen bg-white'>
+    <div className='min-h-screen bg-white '>
       {/* MENU E HERO */}
       <header>
         <div className='relative'>

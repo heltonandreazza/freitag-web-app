@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import YoutubeVideo from '../YoutubeVideo'
 import { ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/solid'
+import '../../styles/global.css'
 
 const Specialties = ({ specialties, src, alt }) => {
   const [collapsedIndex, setCollapsedIndex] = useState(-1)
@@ -73,7 +74,7 @@ const Specialties = ({ specialties, src, alt }) => {
                     )}
                   </div>
                   <div
-                    className={`overflow-y-auto scroll-custom`}
+                    className={`overflow-y-auto scrollbar-thin scrollbar-thumb-blue-300 hover:scrollbar-thumb-blue-400 scrollbar-track-transparent`}
                     style={{
                       transition: 'height 500ms',
                       height: collapsedIndex === index ? `25rem` : `0rem`,
@@ -88,7 +89,7 @@ const Specialties = ({ specialties, src, alt }) => {
                             alt={specialty.name}
                           />
                         </div>
-                        <div className={`pt-4 pb-2`}>
+                        <div className={`py-4 pr-3`}>
                           <p className='text-justify text-gray-600'>
                             {specialty.desc}
                           </p>
