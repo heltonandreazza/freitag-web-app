@@ -64,9 +64,8 @@ const Index = () => {
       <main>
         <div className='flex flex-col'>
           {/* Hero card */}
-          <div className='bg-green-100' style={{ height: window.innerHeight }}>
+          <div className='lg:h-md'>
             <div className='relative max-w-full mx-auto h-1/4'>
-              {/* MENU E HERO */}
               <header>
                 <CTAHeader />
                 <Navigator />

@@ -30,4 +30,20 @@
   .text-shadow-none {
     text-shadow: none;
   }
+
+  .h-sm {
+    height: 40rem;
+  }
+  .h-md {
+    height: 48rem;
+  }
+  .h-lg {
+    height: 64rem;
+  }
+  .h-xl {
+    height: 80rem;
+  }
+  .h-2xl {
+    height: 96rem;
+  }
 }
