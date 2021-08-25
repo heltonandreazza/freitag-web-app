@@ -1,8 +1,7 @@
 import React from 'react'
-import banner from '../assets/banner.png'
+import bannerCorpoClinico from '../assets/bannerCorpoClinico.jpeg'
 import alexandre from '../assets/alexandre.png'
 import vinicius from '../assets/vinicius.png'
-import bruna from '../assets/bruna.png'
 import mauricio from '../assets/mauricio.png'
 import lucas from '../assets/lucas.png'
 import Footer from '../components/Footer'
@@ -109,12 +108,13 @@ const Equipe = () => (
   <div>
     <Navigator />
     <main>
-      <div className='relative h-40 flex items-center justify-center'>
+      <div className='relative h-80 flex items-center justify-center'>
         <div className='absolute top-0 left-0 h-full w-full bg-blue-400 opacity-50' />
-        <img className='h-full w-full object-cover' src={banner} alt='banner' />
-        <h1 className='absolute text-6xl text-bold text-gray-700 text-center'>
-          CORPO CLÍNICO
-        </h1>
+        <img
+          className='h-full w-full object-cover'
+          src={bannerCorpoClinico}
+          alt='bannerCorpoClinico'
+        />
       </div>
       {team.map(({ name, desc, items, image }, index) => (
         <Colaborador
