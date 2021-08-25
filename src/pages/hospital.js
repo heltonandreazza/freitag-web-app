@@ -5,6 +5,8 @@ import Navigator from '../components/Navigator'
 import '../styles/global.css'
 import unidadeTimbo from '../assets/unidade_timbo.jpeg'
 import banner2 from '../assets/banner2.jpeg'
+import { getWhatsUrl } from '../utils'
+import { CTA_WA_MESSAGES } from '../utils/constants'
 
 const Equipe = () => (
   <div>
@@ -32,14 +34,6 @@ const Equipe = () => (
           <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
             <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
               <div>
-                <div>
-                  <span className='h-12 w-12 rounded-md flex items-center justify-center bg-blue-400'>
-                    <InboxIcon
-                      className='h-6 w-6 text-white'
-                      aria-hidden='true'
-                    />
-                  </span>
-                </div>
                 <div className='mt-6'>
                   <h2 className='text-3xl font-extrabold tracking-tight text-gray-900'>
                     Sobre nós
@@ -55,9 +49,16 @@ const Equipe = () => (
                     que possibilita oferecer aparelhos de última geração e uma
                     estrutura de ponta para todos os nossos clientes.
                   </p>
+                  <p className='mt-4 text-lg text-gray-500'>
+                    A qualidade no atendimento e o conforto dos pacientes é o
+                    principal foco do Hospital de Olhos Freitag. O atendimento
+                    diferenciado e a vasta experiência do corpo clínico
+                    transmitem aos pacientes a tranquilidade e a segurança
+                    essencial que você merece.
+                  </p>
                   <div className='mt-6'>
                     <a
-                      href='#'
+                      href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
                       className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-400 hover:bg-blue-700'
                     >
                       fale conosco
@@ -72,51 +73,6 @@ const Equipe = () => (
                   className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
                   src='https://tailwindui.com/img/component-images/inbox-app-screenshot-1.jpg'
                   alt='Inbox user interface'
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className='mt-24'>
-          <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
-            <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2'>
-              <div>
-                <div>
-                  <span className='h-12 w-12 rounded-md flex items-center justify-center bg-blue-400'>
-                    <SparklesIcon
-                      className='h-6 w-6 text-white'
-                      aria-hidden='true'
-                    />
-                  </span>
-                </div>
-                <div className='mt-6'>
-                  <h2 className='text-3xl font-extrabold tracking-tight text-gray-900'>
-                    Atendimento diferenciado
-                  </h2>
-                  <p className='mt-4 text-lg text-gray-500'>
-                    A qualidade no atendimento e o conforto dos pacientes é o
-                    principal foco do Hospital de Olhos Freitag. O atendimento
-                    diferenciado e a vasta experiência do corpo clínico
-                    transmitem aos pacientes a tranquilidade e a segurança
-                    essencial que você merece.
-                  </p>
-                  <div className='mt-6'>
-                    <a
-                      href='#'
-                      className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-400 hover:bg-blue-700'
-                    >
-                      Fale conosco
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className='mt-12 sm:mt-16 lg:mt-0 lg:col-start-1'>
-              <div className='pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full'>
-                <img
-                  className='w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none'
-                  src='https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg'
-                  alt='Customer profile user interface'
                 />
               </div>
             </div>
