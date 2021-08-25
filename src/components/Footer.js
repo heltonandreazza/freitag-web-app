@@ -68,6 +68,15 @@ const Footer = () => (
               <ul className='mt-4 space-y-4'>
                 <li>
                   <a
+                    href='#hospital'
+                    className='text-base text-gray-400 hover:text-gray-900'
+                  >
+                    Hospital
+                  </a>
+                </li>
+
+                <li>
+                  <a
                     href='#unidades'
                     className='text-base text-gray-400 hover:text-gray-900'
                   >
