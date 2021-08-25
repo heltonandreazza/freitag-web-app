@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 import React, { useState } from 'react'
-import banner from '../assets/banner.png'
+import banner from '../assets/banner.jpeg'
 import BlogCards, { BlogCardsItem } from '../components/BlogCards'
 import BlogCategories, {
   BlogCategoriesItem,

@@ -21,7 +21,7 @@ const Navigator = () => (
         <div className='flex justify-between items-center max-w-7xl mx-auto px-4 py-2 sm:px-6 md:justify-start md:space-x-10 lg:px-8'>
           <div className='flex justify-start lg:w-0 lg:flex-1'>
             <a href='/'>
-              <img className='h-32' src={logo} alt='logo' />
+              <img className='h-28' src={logo} alt='logo' />
             </a>
           </div>
           {/* mobile menu */}

@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useStaticQuery, graphql } from 'gatsby'
 import React, { useState } from 'react'
-import banner from '../assets/banner.png'
+import banner from '../assets/banner.jpeg'
 import ceo from '../assets/ceo.png'
 import socialproof from '../assets/socialproof.png'
 import BlogColunCards, {
@@ -61,39 +61,23 @@ const Index = () => {
   const [showSocialProof, setShowSocialProof] = useState(false)
   return (
     <div className='min-h-screen bg-white '>
-      {/* MENU E HERO */}
-      <header>
-        <div className='relative'>
-          <CTAHeader />
-        </div>
-        <Navigator />
-      </header>
-
       <main>
         <div className='flex flex-col'>
           {/* Hero card */}
-          <div className='relative'>
-            <div className='max-w-full mx-auto'>
-              <div className='relative shadow-xl sm:overflow-hidden h-1/2'>
-                <div className='absolute inset-0'>
-                  <img
-                    className='h-full w-full object-cover'
-                    src={banner}
-                    alt='doctors'
-                  />
-                  {/* <div className="absolute inset-0 bg-blue-500 mix-blend-multiply" /> */}
-                </div>
-                <div className='relative px-4 py-16 sm:px-6 lg:p-48 2xl:p-80'>
-                  <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
-                    {/* <a
-                      href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
-                      className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium shadow-sm text-blue-400 bg-white hover:bg-blue-50 sm:px-8 opacity-90 hover:opacity-100'
-                    >
-                      Fale conosco
-                    </a> */}
-                  </div>
-                </div>
-              </div>
+          <div className='bg-green-100' style={{ height: window.innerHeight }}>
+            <div className='relative max-w-full mx-auto h-1/4'>
+              {/* MENU E HERO */}
+              <header>
+                <CTAHeader />
+                <Navigator />
+              </header>
+            </div>
+            <div className='relative max-w-full mx-auto h-3/4'>
+              <img
+                className='h-full w-full object-cover'
+                src={banner}
+                alt='doctors'
+              />
             </div>
           </div>
 

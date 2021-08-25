@@ -3,7 +3,7 @@ import { getWhatsUrl } from '../../utils'
 import { CTA_WA_MESSAGES } from '../../utils/constants'
 
 const CTAHeader = () => (
-  <nav className='flex bg-blue-500 p-4'>
+  <nav className='flex bg-blue-500 p-2'>
     <div className='flex flex-col md:flex-row flex-1 items-center justify-center text-white'>
       <svg
         className='h-10 w-10'
