@@ -14,47 +14,59 @@ import '../styles/global.css'
 const buildOptions = (currentUrl) => {
   const options = {
     renderMark: {
-      [MARKS.BOLD]: (text) => <strong className="text-gray-900 font-bold">{text}</strong>,
+      [MARKS.BOLD]: (text) => (
+        <strong className='text-gray-900 font-bold'>{text}</strong>
+      ),
     },
     renderNode: {
       [BLOCKS.HEADING_1]: (node, children) => (
-        <h1 className="mt-16 mb-12 text-6xl font-bold">{children}</h1>
+        <h1 className='mt-16 mb-12 text-6xl font-bold'>{children}</h1>
       ),
       [BLOCKS.HEADING_2]: (node, children) => (
-        <h2 className="mt-14 mb-8 text-4xl font-bold">{children}</h2>
+        <h2 className='mt-14 mb-8 text-4xl font-bold'>{children}</h2>
       ),
       [BLOCKS.HEADING_3]: (node, children) => (
-        <h2 className="mt-10 mb-6 text-2xl font-bold">{children}</h2>
+        <h2 className='mt-10 mb-6 text-2xl font-bold'>{children}</h2>
       ),
       [BLOCKS.HEADING_4]: (node, children) => (
-        <h2 className="mt-8 mb-4 text-xl font-bold">{children}</h2>
+        <h2 className='mt-8 mb-4 text-xl font-bold'>{children}</h2>
       ),
       [BLOCKS.HEADING_5]: (node, children) => (
-        <h2 className="mt-6 mb-2 text-lg font-bold">{children}</h2>
+        <h2 className='mt-6 mb-2 text-lg font-bold'>{children}</h2>
       ),
       [BLOCKS.HEADING_6]: (node, children) => (
-        <h2 className="mt-4 text-sm font-bold">{children}</h2>
+        <h2 className='mt-4 text-sm font-bold'>{children}</h2>
       ),
       [BLOCKS.PARAGRAPH]: (node, children) => (
-        <p className="mt-8 text-xl text-gray-500 leading-8">{children}</p>
+        <p className='mt-8 text-xl text-gray-500 leading-8'>{children}</p>
       ),
-      [BLOCKS.UL_LIST]: (node, children) => <ul className="ml-6 list-disc">{children}</ul>,
-      [BLOCKS.LIST_ITEM]: (node, children) => <li className="text-gray-300">{children}</li>,
+      [BLOCKS.UL_LIST]: (node, children) => (
+        <ul className='ml-6 list-disc'>{children}</ul>
+      ),
+      [BLOCKS.LIST_ITEM]: (node, children) => (
+        <li className='text-gray-300'>{children}</li>
+      ),
       [BLOCKS.QUOTE]: (node, children) => (
-        <blockquote className="border-l-4 pl-6">
-          <p className="mt-8 text-xl text-gray-900 italic leading-8">
+        <blockquote className='border-l-4 pl-6'>
+          <p className='mt-8 text-xl text-gray-900 italic leading-8'>
             {node.content[0].content[0].value}
           </p>
         </blockquote>
       ),
       [INLINES.HYPERLINK]: (node, children) => (
-        <a className="text-blue-400 hover:text-blue-500 underline" href={node.data.uri}>
+        <a
+          className='text-blue-400 hover:text-blue-500 underline'
+          href={node.data.uri}
+        >
           {children}
         </a>
       ),
       [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
         // eslint-disable-next-line react/destructuring-assignment
-        <GatsbyImage className="mt-8" image={node.data.target?.fields?.gatsbyImageData} />
+        <GatsbyImage
+          className='mt-8'
+          image={node.data.target?.fields?.gatsbyImageData}
+        />
       ),
     },
   }
@@ -85,33 +97,35 @@ const Post = ({ data: { post, posts } = {}, path }) => {
         onClickCloseMenuMobile={() => setShowMenuMobile(false)}
         showMenuMobile={showMenuMobile}
       />
-      <div className="relative py-16 bg-white overflow-hidden">
+      <div className='relative py-16 bg-white overflow-hidden'>
         <AbsoluteBlock />
-        <div className="container container mx-auto relative px-6 lg:px-64 2xl:px-80">
-          <figure className="mx-auto">
+        <div className='container container mx-auto relative px-6 lg:px-64 2xl:px-80'>
+          <figure className='mx-auto'>
             <GatsbyImage
-              className="h-80 w-full object-cover my-8"
+              className='h-80 w-full object-cover my-8'
               image={post.featuredImage.gatsbyImageData}
             />
           </figure>
-          <div className="text-lg">
+          <div className='text-lg'>
             <h1>
               <a
-                className="block text-base text-center text-blue-400 hover:text-blue-500 font-semibold tracking-wide uppercase"
+                className='block text-base text-center text-blue-400 hover:text-blue-500 font-semibold tracking-wide uppercase'
                 href={`/blog${post.categories[0]?.slug}`}
               >
                 {post.categories[0]?.category}
               </a>
-              <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+              <span className='mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>
                 {post?.title}
               </span>
             </h1>
-            <div>{documentToReactComponents(contentRichJson, buildOptions(path))}</div>
+            <div>
+              {documentToReactComponents(contentRichJson, buildOptions(path))}
+            </div>
           </div>
         </div>
       </div>
       <Author author={post.author} />
-      <BlogCards title="Veja os conteúdos mais recentes">
+      <BlogCards title='Veja os conteúdos mais recentes'>
         {posts.edges.map(({ node }) => (
           <BlogCardsItem
             imageUrl={node.featuredImage.gatsbyImageData}
@@ -128,7 +142,7 @@ const Post = ({ data: { post, posts } = {}, path }) => {
         ))}
       </BlogCards>
       <Disqus
-        className="container mx-auto px-6 lg:px-14 2xl:px-40"
+        className='container mx-auto px-6 lg:px-14 2xl:px-40'
         config={{
           url: `https://freitag.netlify.app${path}`,
           identifier: post.slug,
@@ -160,7 +174,6 @@ export const pageQuery = graphql`
         createdAt
         name
         urlInstagram
-        urlLinkedin
         post {
           id
         }
@@ -209,70 +222,106 @@ export const pageQuery = graphql`
 export default Post
 
 const AbsoluteBlock = () => (
-  <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
-    <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
+  <div className='hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full'>
+    <div
+      className='relative h-full text-lg max-w-prose mx-auto'
+      aria-hidden='true'
+    >
       <svg
-        className="absolute top-12 left-full transform translate-x-32"
+        className='absolute top-12 left-full transform translate-x-32'
         width={404}
         height={384}
-        fill="none"
-        viewBox="0 0 404 384"
+        fill='none'
+        viewBox='0 0 404 384'
       >
         <defs>
           <pattern
-            id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
+            id='74b3fd99-0a6f-4271-bef2-e80eeafdf357'
             x={0}
             y={0}
             width={20}
             height={20}
-            patternUnits="userSpaceOnUse"
+            patternUnits='userSpaceOnUse'
           >
-            <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className='text-gray-200'
+              fill='currentColor'
+            />
           </pattern>
         </defs>
-        <rect width={404} height={384} fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
+        <rect
+          width={404}
+          height={384}
+          fill='url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)'
+        />
       </svg>
       <svg
-        className="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
+        className='absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32'
         width={404}
         height={384}
-        fill="none"
-        viewBox="0 0 404 384"
+        fill='none'
+        viewBox='0 0 404 384'
       >
         <defs>
           <pattern
-            id="f210dbf6-a58d-4871-961e-36d5016a0f49"
+            id='f210dbf6-a58d-4871-961e-36d5016a0f49'
             x={0}
             y={0}
             width={20}
             height={20}
-            patternUnits="userSpaceOnUse"
+            patternUnits='userSpaceOnUse'
           >
-            <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className='text-gray-200'
+              fill='currentColor'
+            />
           </pattern>
         </defs>
-        <rect width={404} height={384} fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+        <rect
+          width={404}
+          height={384}
+          fill='url(#f210dbf6-a58d-4871-961e-36d5016a0f49)'
+        />
       </svg>
       <svg
-        className="absolute bottom-12 left-full transform translate-x-32"
+        className='absolute bottom-12 left-full transform translate-x-32'
         width={404}
         height={384}
-        fill="none"
-        viewBox="0 0 404 384"
+        fill='none'
+        viewBox='0 0 404 384'
       >
         <defs>
           <pattern
-            id="d3eb07ae-5182-43e6-857d-35c643af9034"
+            id='d3eb07ae-5182-43e6-857d-35c643af9034'
             x={0}
             y={0}
             width={20}
             height={20}
-            patternUnits="userSpaceOnUse"
+            patternUnits='userSpaceOnUse'
           >
-            <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
+            <rect
+              x={0}
+              y={0}
+              width={4}
+              height={4}
+              className='text-gray-200'
+              fill='currentColor'
+            />
           </pattern>
         </defs>
-        <rect width={404} height={384} fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
+        <rect
+          width={404}
+          height={384}
+          fill='url(#d3eb07ae-5182-43e6-857d-35c643af9034)'
+        />
       </svg>
     </div>
   </div>
