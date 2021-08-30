@@ -16,7 +16,7 @@ const CTABanner = () => (
         </span>
         <a
           href={getWhatsUrl(
-            CTA_WA_MESSAGES.headerTopCta,
+            CTA_WA_MESSAGES.ctaBanner1,
             'https://wa.me/5547992626100'
           )}
           target='_blank'
@@ -27,7 +27,7 @@ const CTABanner = () => (
         </a>
         <a
           href={getWhatsUrl(
-            CTA_WA_MESSAGES.headerTopCta,
+            CTA_WA_MESSAGES.ctaBanner2,
             'https://wa.me/5547991689605'
           )}
           target='_blank'
@@ -38,7 +38,7 @@ const CTABanner = () => (
         </a>
         <a
           href={getWhatsUrl(
-            CTA_WA_MESSAGES.headerTopCta,
+            CTA_WA_MESSAGES.ctaBanner3,
             'https://wa.me/5547991752857'
           )}
           target='_blank'

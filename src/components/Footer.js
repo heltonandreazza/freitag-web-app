@@ -101,16 +101,6 @@ const Footer = () => (
               <ul className='mt-4 space-y-4'>
                 <li>
                   <a
-                    href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
-                    target='_blank'
-                    className='text-base text-gray-400 hover:text-gray-900'
-                    rel='noreferrer'
-                  >
-                    Contato
-                  </a>
-                </li>
-                <li>
-                  <a
                     href='/blog'
                     target='_blank'
                     className='text-base text-gray-400 hover:text-gray-900'

@@ -58,7 +58,7 @@ const Equipe = () => (
                   </p>
                   <div className='mt-6'>
                     <a
-                      href={getWhatsUrl(CTA_WA_MESSAGES.headerTopCta)}
+                      href={getWhatsUrl(CTA_WA_MESSAGES.ctaBanner1)}
                       className='inline-flex px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-400 hover:bg-blue-700'
                     >
                       fale conosco
