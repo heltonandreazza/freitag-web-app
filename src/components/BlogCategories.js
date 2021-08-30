@@ -5,17 +5,17 @@ import React from 'react'
 export const BlogCategoriesItem = ({ category, image, slug }) => (
   <Link
     to={slug}
-    className="h-40 px-8 w-40 bg-blue-100 border border-transparent shadow flex flex-col items-center justify-center mr-4 text-blue-400 hover:bg-blue-500 hover:text-white"
+    className='flex items-center justify-center border hover:shadow-xl border-blue-100 p-4 m-8 ml-0 mt-4'
   >
-    <GatsbyImage className="h-14 w-14" image={image} />
-    <h1 className="text-lg pt-2">{category}</h1>
+    <GatsbyImage className='h-14 w-14' image={image} />
+    <h1 className='text-lg font-medium px-4 text-blue-500'>{category}</h1>
   </Link>
 )
 
 const BlogCategories = ({ children }) => (
-  <div className="container mx-auto py-8">
-    <h1 className="py-4 text-lg font-medium">Buscar por categorias</h1>
-    <div className="flex flex-nowrap overflow-x-auto">{children}</div>
+  <div className='container mx-auto'>
+    <h2 className='font-bold text-gray-900 text-2xl pt-4'>Categorias</h2>
+    <div className='flex flex-nowrap overflow-x-auto'>{children}</div>
   </div>
 )
 
