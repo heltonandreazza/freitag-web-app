@@ -6,13 +6,13 @@ import logo from '../assets/logo.png'
 import { URLS } from '../utils/constants'
 
 const navigation = [
-  { name: 'Hospital', href: 'hospital' },
   { name: 'Unidades', href: '#unidades' },
   { name: 'Especialidades', href: '#especialidades' },
   { name: 'Contato', href: '#atendimento' },
   { name: 'Convênios', href: '#convenios' },
   { name: 'Blog', href: '/blog' },
   { name: 'Corpo clínico', href: '/equipe' },
+  { name: 'Reclamações', href: '/contato' },
 ]
 
 const Navigator = () => (

@@ -3,7 +3,7 @@ import logo from '../assets/logo.png'
 import { getWhatsUrl } from '../utils'
 import { CTA_WA_MESSAGES, URLS } from '../utils/constants'
 
-const Footer = () => (
+const Footer = ({ showMenu = true }) => (
   <footer className='bg-white' aria-labelledby='footerHeading'>
     <h2 id='footerHeading' className='sr-only'>
       Footer
@@ -60,7 +60,7 @@ const Footer = () => (
           </div>
         </div>
         <div className='mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2'>
-          <div className='md:grid md:grid-cols-2 md:gap-8'>
+          {showMenu && <div className='md:grid md:grid-cols-2 md:gap-8'>
             <div>
               <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
                 Menu
@@ -112,6 +112,7 @@ const Footer = () => (
               </ul>
             </div>
           </div>
+          }
           <div className='md:grid md:grid-cols-2 md:gap-8'>
             <div>
               <h3 className='text-sm font-semibold text-gray-400 tracking-wider uppercase'>
