@@ -24,7 +24,7 @@ const Place = ({
     <div className='flex flex-col sm:flex-row shadow-lg m-4'>
       {src && (
         <div className='flex justify-end p-4'>
-          <img src={src} className='h-72 w-96' alt='location' />
+          <img src={src} className='h-72 w-96 object-cover' alt='location' />
         </div>
       )}
       <div className='flex flex-col p-4 py-8 justify-center'>
