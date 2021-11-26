@@ -12,7 +12,7 @@ const navigation = [
   { name: 'Convênios', href: '#convenios' },
   { name: 'Blog', href: '/blog' },
   { name: 'Corpo clínico', href: '/equipe' },
-  { name: 'Reclamações', href: '/contato' },
+  { name: 'Contato', href: '/contato' },
 ]
 
 const Navigator = () => (
