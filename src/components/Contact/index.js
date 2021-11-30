@@ -82,15 +82,7 @@ export default function Example() {
           </h2>
           <p className='mt-4 text-lg leading-6 text-gray-500'>
             Envie reclamações, sugestões ou elogios para ajudar a melhorar o
-            nosso atendimento através do e-mail{' '}
-            <a
-              href='#'
-              onClick={() => open('mailto:adm@hof.com.br')}
-              className='text-blue-500 font-medium'
-            >
-              adm@hof.com.br
-            </a>
-            .
+            nosso atendimento.
           </p>
         </div>
         {/* <form action="/success" name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
