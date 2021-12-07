@@ -1,9 +1,9 @@
 import React from 'react'
-import bannerCorpoClinico from '../assets/bannerCorpoClinico.jpeg'
 import alexandre from '../assets/alexandre.png'
-import vinicius from '../assets/vinicius.png'
-import mauricio from '../assets/mauricio.png'
+import bannerCorpoClinico from '../assets/bannerCorpoClinico.jpeg'
 import lucas from '../assets/lucas.png'
+import mauricio from '../assets/mauricio.png'
+import vinicius from '../assets/vinicius.png'
 import Footer from '../components/Footer'
 import Navigator from '../components/Navigator'
 import '../styles/global.css'
@@ -68,7 +68,7 @@ const team = [
   {
     name: 'Dr. Vinicius R. Joner',
     desc:
-      'O Dr. Vinicius R. Joner realiza cirurgias e é especialista em Catarata e lentes de contato!',
+      'O Dr. Vinicius R. Joner Atua em segmento anterior (catarata, lentes de contato, crosslinking).',
     items: [
       'Graduado em Medicina pela Universidade Federal de Pelotas/UFPel-RS, realizou residência Médica em Oftalmologia no Hospital de Olhos do Blumenau.',
       'Membro do Conselho Brasileiro de Oftalmologia (CBO).',
@@ -93,7 +93,7 @@ const team = [
   },
   {
     name: 'Dr. Mauricio C. Munareto',
-    desc: 'O Dr. Mauricio C. Munareto é especialista em catarata aqui no HOF!',
+    desc: 'O Dr. Mauricio C. Munareto atua em segmento anterior (catarata, lentes de contato e crosslinking).',
     items: [
       'Especialista em oftalmologia (Clínica e cirurgica) pelo MEC desde 2018 (Hospital de olho de Blumenau).',
       'Membro da Soblec - Sociedade Brasileira de Lente de Contato.',
