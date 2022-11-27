@@ -52,6 +52,9 @@ module.exports = {
   },
   // Configuração para o Gatsby
   settings: {
-    "import/core-modules": ["react"],,
+    "import/core-modules": ["react"],
   },
+  purge: [
+    "./src/**/*.js", 
+  ],
 };
