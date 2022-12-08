@@ -26,7 +26,7 @@ const POSTS_QUERY = graphql`
     posts: allContentfulPost(
       limit: 3
       filter: { visible: { eq: true } }
-      sort: { order: DESC, fields: createdAt }
+      sort: { createdAt: DESC }
     ) {
       edges {
         node {

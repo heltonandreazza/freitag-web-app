@@ -67,7 +67,7 @@ export const pageQuery = graphql`
       limit: $limit
       skip: $skip
       filter: { visible: { eq: true }, categories: { elemMatch: { slug: { eq: $slug } } } }
-      sort: { order: DESC, fields: createdAt }
+      sort: { createdAt: DESC }
     ) {
       edges {
         node {
