@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
-        printRejected: true, // Print removed selectors and processed file names
+        //printRejected: true, // Print removed selectors and processed file names
         tailwind: true, // Enable tailwindcss support
         // develop: true, // Enable while using `gatsby develop`
         // whitelist: ['whitelist'], // Don't remove this selector

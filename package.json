@@ -20,7 +20,6 @@
     "gatsby": "^5.2.0",
     "gatsby-cli": "^5.2.0",
     "gatsby-plugin-disqus": "^1.2.2",
-    "gatsby-plugin-gdpr-cookies": "^2.0.6",
     "gatsby-plugin-google-gtag": "^3.10.0",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-sharp": "^5.2.0",
