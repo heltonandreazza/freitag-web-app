@@ -3,7 +3,6 @@ import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types'
 import { graphql } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'
-import { Disqus } from 'gatsby-plugin-disqus'
 import Author from '../components/Author'
 import BlogCards, { BlogCardsItem } from '../components/BlogCards'
 import Footer from '../components/BlogFooter'
@@ -141,14 +140,6 @@ const Post = ({ data: { post, posts } = {}, path }) => {
           />
         ))}
       </BlogCards>
-      <Disqus
-        className='container mx-auto px-6 lg:px-14 2xl:px-40'
-        config={{
-          url: `https://freitag.netlify.app${path}`,
-          identifier: post.slug,
-          title: post.title,
-        }}
-      />
       <Footer />
     </div>
   )
