@@ -113,7 +113,7 @@ export const pageQuery = graphql`
       limit: $limit
       skip: $skip
       filter: { visible: { eq: true } }
-      sort: { order: DESC, fields: createdAt }
+      sort: { createdAt: DESC }
     ) {
       edges {
         node {

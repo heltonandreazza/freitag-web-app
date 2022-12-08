@@ -190,7 +190,7 @@ export const pageQuery = graphql`
     posts: allContentfulPost(
       limit: 4
       filter: { visible: { eq: true } }
-      sort: { order: DESC, fields: createdAt }
+      sort: { createdAt: DESC }
     ) {
       edges {
         node {
