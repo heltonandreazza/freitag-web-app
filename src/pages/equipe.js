@@ -74,7 +74,7 @@ const team = [
       'Membro do Conselho Brasileiro de Oftalmologia (CBO).',
       'Membro da Sociedade Brasileira de Catarata e Implantes Intraoculares.',
       'Membro da Sociedade Brasileira de Cirurgia Refrativa.',
-      'O Dr. Vinicius atende na unidades HOF - Timbó, Benedito Novo e Apiúna.',
+      'O Dr. Vinicius atende na unidades HOF - Timbó',
     ],
     image: vinicius,
   },
