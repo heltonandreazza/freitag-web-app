@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useStaticQuery, graphql } from 'gatsby'
 import React, { useState } from 'react'
+import banner from '../assets/banner.jpeg'
 import ceo from '../assets/ceo.png'
 import socialproof from '../assets/socialproof.png'
 import BlogColunCards, {
@@ -52,11 +53,6 @@ const POSTS_QUERY = graphql`
         }
       }
     }
-    banner: contentfulBannerPrincipal {
-      bannerImage {
-        gatsbyImageData
-      }
-    }
   }
 `
 
@@ -78,7 +74,7 @@ const Index = () => {
             <div className='relative max-w-full mx-auto h-3/4'>
               <img
                 className='h-full w-full object-cover'
-                src={data.banner.bannerImage.gatsbyImageData.images.fallback.src}
+                src={banner}
                 alt='doctors'
               />
             </div>
@@ -194,6 +190,18 @@ const Index = () => {
             href='#slide-2'
           >
             INDAIAL
+          </a>
+          <a
+            className='mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center'
+            href='#slide-3'
+          >
+            BENEDITO NOVO
+          </a>
+          <a
+            className='mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center'
+            href='#slide-4'
+          >
+            APIÚNA
           </a>
         </div>
       </div>

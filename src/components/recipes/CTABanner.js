@@ -16,6 +16,17 @@ const CTABanner = () => (
         </span>
         <a
           href={getWhatsUrl(
+            CTA_WA_MESSAGES.ctaBanner1,
+            'https://wa.me/5547992626100'
+          )}
+          target='_blank'
+        >
+          <span className='underline text-blue-400 hover:text-blue-500 block mb-2'>
+            Timbó / Benedito Novo - (47) 99262-6100
+          </span>
+        </a>
+        <a
+          href={getWhatsUrl(
             CTA_WA_MESSAGES.ctaBanner2,
             'https://wa.me/5547991689605'
           )}
@@ -23,6 +34,17 @@ const CTABanner = () => (
         >
           <span className='underline text-blue-400 hover:text-blue-500 block mb-2'>
             Indaial - (47) 99168-9605
+          </span>
+        </a>
+        <a
+          href={getWhatsUrl(
+            CTA_WA_MESSAGES.ctaBanner3,
+            'https://wa.me/5547991752857'
+          )}
+          target='_blank'
+        >
+          <span className='underline text-blue-400 hover:text-blue-500 block mb-2'>
+            Apiúna - (47) 99175-2857
           </span>
         </a>
       </h2>
