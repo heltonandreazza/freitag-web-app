@@ -49,6 +49,7 @@ const Author = ({ author }) => (
             <GatsbyImage
               className='absolute inset-0 h-full w-full object-cover'
               image={author.image.gatsbyImageData}
+              alt='Imagem do altor'
             />
           </div>
         </div>

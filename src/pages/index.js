@@ -80,8 +80,7 @@ const Index = () => {
               <img
                 className='h-full w-full object-cover'
                 src={data.banner.bannerImage.gatsbyImageData.images.fallback.src}
-                alt='doctors'
-              
+                alt='doctors' 
               />
             </div>
           </div>

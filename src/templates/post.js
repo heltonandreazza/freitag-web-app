@@ -65,6 +65,7 @@ const buildOptions = (currentUrl) => {
         <GatsbyImage
           className='mt-8'
           image={node.data.target?.fields?.gatsbyImageData}
+          alt='imagem'
         />
       ),
     },

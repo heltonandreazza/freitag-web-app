@@ -36,7 +36,7 @@ export const BlogColunCardsItem = ({
         <div className="flex-shrink-0">
           <a href={authorHref}>
             <span className="sr-only">{authorName}</span>
-            <GatsbyImage className="h-10 w-10 rounded-sm" image={authorImageUrl} />
+            <GatsbyImage className="h-10 w-10 rounded-sm" image={authorImageUrl} alt='Imagem do autor' />
           </a>
         </div>
         <div className="ml-3">
