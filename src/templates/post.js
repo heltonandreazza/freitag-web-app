@@ -137,6 +137,7 @@ const Post = ({ data: { post, posts } = {}, path }) => {
             authorImageUrl={node.author?.image.gatsbyImageData}
             authorHref={node.author?.urlInstagram}
             readingTime={node.readTime}
+            key={node.title}
           />
         ))}
       </BlogCards>

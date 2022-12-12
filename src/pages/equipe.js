@@ -39,7 +39,7 @@ const Colaborador = ({ name, desc, items, reverse, image }) => (
       <p className='text-lg font-medium text-gray-600 py-2'>{desc}</p>
       <div className='pt-4'>
         {items.map((item) => (
-          <p className='flex text-lg font-medium text-gray-500 py-1'>
+          <p className='flex text-lg font-medium text-gray-500 py-1 ' key={item}>
             <span className='pr-4'>
               <Check />
             </span>
@@ -123,6 +123,7 @@ const Equipe = () => (
           items={items}
           image={image}
           reverse={index % 2 !== 0}
+          key={name}
         />
       ))}
     </main>

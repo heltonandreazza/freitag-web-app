@@ -81,6 +81,7 @@ const Index = () => {
                 className='h-full w-full object-cover'
                 src={data.banner.bannerImage.gatsbyImageData.images.fallback.src}
                 alt='doctors'
+              
               />
             </div>
           </div>
@@ -95,7 +96,7 @@ const Index = () => {
               </p>
               <div className='container flex justify-around flex-wrap'>
                 {convenios.map((c) => (
-                  <img className='h-14 m-8' src={c.src} alt={c.alt} />
+                  <img className='h-14 m-8' src={c.src} alt={c.alt} key={c.src} />
                 ))}
               </div>
             </div>
@@ -179,6 +180,7 @@ const Index = () => {
               contactUrl={p.contactUrl}
               urlmap={p.urlmap}
               src={p.src}
+              key={p.id}
             />
           ))}
         </div>
@@ -214,6 +216,7 @@ const Index = () => {
             datetime={node.createdAt}
             date={new Date(node.createdAt).toLocaleDateString()}
             readingTime={node.readTime}
+            key={node.title}
           />
         ))}
       </BlogColunCards>
