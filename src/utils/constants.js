@@ -9,10 +9,8 @@ export const URLS = {
 
 export const CTA_WA_MESSAGES = {
   ctaBanner1:
-    'Olá unidade HOF de Timbó/Benedito Novo! Estava no site e gostaria de falar com vocês!',
+    'Olá unidade HOF de Timbó! Estava no site e gostaria de falar com vocês!',
   ctaBanner2:
     'Olá unidade HOF de Indaial! Estava no site e gostaria de falar com vocês!',
-  ctaBanner3:
-    'Olá unidade HOF de Apiúna! Estava no site e gostaria de falar com vocês!',
   pageNotFound: 'Página não encotrada!',
 }
