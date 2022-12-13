@@ -51,6 +51,7 @@ const Authors = ({
                       <GatsbyImage
                         className='object-cover shadow-lg '
                         image={person.image.gatsbyImageData}
+                        alt='Person'
                       />
                     </div>
                     <div className='sm:col-span-2'>

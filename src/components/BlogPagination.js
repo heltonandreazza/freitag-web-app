@@ -22,7 +22,7 @@ const BlogPagination = ({ currentPage, pagesLength, prefix = '' }) => (
       </Link>
     </BlogPaginationItem>
     {Array.from({ length: pagesLength }).map((_, i) => (
-      <BlogPaginationItem className={`hidden ${currentPage === i ? 'bg-blue-500' : ''}`}>
+      <BlogPaginationItem className={`hidden ${currentPage === i ? 'bg-blue-500' : ''}` } key={i}>
         <Link className="p-4" to={`/blog${prefix}${i === 0 ? '' : `/${i}`}`}>
           {i + 1}
         </Link>

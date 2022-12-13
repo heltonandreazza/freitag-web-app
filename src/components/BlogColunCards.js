@@ -18,7 +18,7 @@ export const BlogColunCardsItem = ({
   <div key={title} className="flex flex-col shadow-lg overflow-hidden">
     <div className="flex-shrink-0">
       {/* <img className="h-48 w-full object-cover" src={imageUrl} alt="" /> */}
-      <GatsbyImage className="h-48 w-full object-cover" image={imageUrl} />
+      <GatsbyImage className="h-48 w-full object-cover" image={imageUrl} alt="imagen" />
     </div>
     <div className="flex-1 bg-white p-6 flex flex-col justify-between">
       <div className="flex-1">
@@ -36,7 +36,7 @@ export const BlogColunCardsItem = ({
         <div className="flex-shrink-0">
           <a href={authorHref}>
             <span className="sr-only">{authorName}</span>
-            <GatsbyImage className="h-10 w-10 rounded-sm" image={authorImageUrl} />
+            <GatsbyImage className="h-10 w-10 rounded-sm" image={authorImageUrl} alt='Imagem do autor' />
           </a>
         </div>
         <div className="ml-3">

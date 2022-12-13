@@ -59,6 +59,7 @@ const Blog = ({ data, pageContext }) => {
                 category={node.category}
                 image={node.image.gatsbyImageData}
                 slug={`/blog${node.slug}`}
+                key={node.category}
               />
             ))}
           </BlogCategories>
@@ -78,6 +79,7 @@ const Blog = ({ data, pageContext }) => {
               datetime={node.createdAt}
               date={new Date(node.createdAt).toLocaleDateString()}
               readingTime={node.readTime}
+              key={node.title}
             />
           ))}
         </BlogColunCards>
@@ -94,6 +96,7 @@ const Blog = ({ data, pageContext }) => {
               authorImageUrl={node.author?.image.gatsbyImageData}
               authorHref={node.author?.urlInstagram}
               readingTime={node.readTime}
+              key={node.title}
             />
           ))}
         </BlogCards>

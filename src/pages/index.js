@@ -53,6 +53,12 @@ const POSTS_QUERY = graphql`
         }
       }
     }
+    banner: contentfulMainBanner {
+      id
+      image {
+        gatsbyImageData
+      }
+    }
   }
 `
 
@@ -74,8 +80,8 @@ const Index = () => {
             <div className='relative max-w-full mx-auto h-3/4'>
               <img
                 className='h-full w-full object-cover'
-                src={banner}
-                alt='doctors'
+                src={data.banner.image.gatsbyImageData.images.fallback.src}
+                alt='doctors' 
               />
             </div>
           </div>
@@ -90,7 +96,7 @@ const Index = () => {
               </p>
               <div className='container flex justify-around flex-wrap'>
                 {convenios.map((c) => (
-                  <img className='h-14 m-8' src={c.src} alt={c.alt} />
+                  <img className='h-14 m-8' src={c.src} alt={c.alt} key={c.src} />
                 ))}
               </div>
             </div>
@@ -174,6 +180,7 @@ const Index = () => {
               contactUrl={p.contactUrl}
               urlmap={p.urlmap}
               src={p.src}
+              key={p.id}
             />
           ))}
         </div>
@@ -191,18 +198,7 @@ const Index = () => {
           >
             INDAIAL
           </a>
-          <a
-            className='mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center'
-            href='#slide-3'
-          >
-            BENEDITO NOVO
-          </a>
-          <a
-            className='mr-1 p-2 text-gray-100 rounded-2xl bg-blue-400 hover:bg-blue-500 flex justify-center items-center'
-            href='#slide-4'
-          >
-            APIÚNA
-          </a>
+     
         </div>
       </div>
       <BlogColunCards title='Postagens mais recentes' href='\blog'>
@@ -220,6 +216,7 @@ const Index = () => {
             datetime={node.createdAt}
             date={new Date(node.createdAt).toLocaleDateString()}
             readingTime={node.readTime}
+            key={node.title}
           />
         ))}
       </BlogColunCards>

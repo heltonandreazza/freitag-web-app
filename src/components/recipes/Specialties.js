@@ -15,7 +15,7 @@ const Specialties = ({ specialties, src, alt }) => {
             </h2>
             <div className='mt-8 grid grid-cols-1 lg:mt-0'>
               {specialties.map((specialty, index) => (
-                <div className={`col-span-2 mb-2`}>
+                <div className={`col-span-2 mb-2`} key={index}>
                   <div
                     className={`flex justify-center items-center p-1 bg-gray-50 font-bold cursor-pointer  rounded-t-lg ${
                       collapsedIndex === index ? 'bg-blue-400' : ''

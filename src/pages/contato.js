@@ -16,7 +16,7 @@ const Navigation = () => {
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <a href="/">
               <span className="sr-only">Workflow</span>
-              <img className="h-20 w-auto" src={logo} alt="" />
+              <img className="h-20 w-auto" src={logo} alt="logo" />
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">

@@ -35,6 +35,7 @@ const Blog = ({ data, pageContext }) => {
               datetime={node.createdAt}
               date={new Date(node.createdAt).toLocaleDateString()}
               readingTime={node.readTime}
+              key={node.description}
             />
           ))}
         </BlogColunCards>
@@ -47,6 +48,7 @@ const Blog = ({ data, pageContext }) => {
               date={new Date(node.createdAt).toLocaleDateString()}
               description={node.description}
               href={`${node.slug}`}
+              key={node.title}
             />
           ))}
         </BlogCards>
