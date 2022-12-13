@@ -53,8 +53,9 @@ const POSTS_QUERY = graphql`
         }
       }
     }
-    banner: contentfulBannerPrincipal {
-      bannerImage {
+    banner: contentfulMainBanner {
+      id
+      image {
         gatsbyImageData
       }
     }
@@ -79,7 +80,7 @@ const Index = () => {
             <div className='relative max-w-full mx-auto h-3/4'>
               <img
                 className='h-full w-full object-cover'
-                src={data.banner.bannerImage.gatsbyImageData.images.fallback.src}
+                src={data.banner.image.gatsbyImageData.images.fallback.src}
                 alt='doctors' 
               />
             </div>
