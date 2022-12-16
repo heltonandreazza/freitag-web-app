@@ -23,7 +23,7 @@ import lacrimais from '../assets/LACRIMAIS-min.jpeg'
 import oftalmologica from '../assets/OFTALMOLOGICA-min.jpeg'
 import pterigio from '../assets/PTERIGIO-min.jpeg'
 import refrativa from '../assets/REFRATIVA-min.jpeg'
-import unidadeIndaial from '../assets/unidade_indaial.png'
+import unidadeIndaial from '../assets/unidade_indaial2.jpeg'
 import unidadeTimbo from '../assets/unidade_timbo.jpeg'
 import yag from '../assets/YAG-min.jpeg'
 
@@ -142,13 +142,13 @@ O implante está indicado para doenças da córnea em que ocorre alteração de 
       id: 'slide-2',
       title: 'Hospital de Olhos Freitag - Indaial',
       description:
-        'Endereço: Rua Marechal Deodoro da Fonseca, 1025 - Sala 04 - Tapajós, Indaial - SC',
-      description2: 'Ref: Tapajós',
+        'Endereço: AV. Getúlio Vargas 101 - Sala 105 - Centro, Indaial - SC',
+      description2: 'Ref: Em frente a prefeitura',
       contact: 'Telefone: (47) 99168-9605',
       contact2: 'Whatsapp: (47) 99168-9605',
       contactUrl: 'https://wa.me/5547991689605',
       urlmap:
-        'https://www.google.com/maps/place/Rua+Marechal+Deodoro+da+Fonseca,+1025+-+Tapaj%C3%B3s,+Indaial+-+SC,+89130-000/@-26.9008823,-49.2433544,17z/data=!3m1!4b1!4m5!3m4!1s0x94df028a331fab73:0xc94877b2eea8b0c1!8m2!3d-26.9008823!4d-49.2411657',
+        'https://goo.gl/maps/6JRUAwfnX7257maQ7',
       src: unidadeIndaial,
     },
   ],
