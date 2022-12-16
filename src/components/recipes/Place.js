@@ -12,7 +12,7 @@ const Place = ({
   src,
 }) => (
   <div
-    className='flex flex-col snap-start w-full h-full flex items-center justify-center flex-shrink-0'
+    className='flex flex-col snap-start w-full h-full items-center justify-center flex-shrink-0'
     id={id}
   >
     <div>
