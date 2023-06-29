@@ -66,19 +66,6 @@ const team = [
     image: alexandre,
   },
   {
-    name: 'Dr. Vinicius R. Joner',
-    desc:
-      'O Dr. Vinicius R. Joner Atua em segmento anterior (catarata, lentes de contato, crosslinking).',
-    items: [
-      'Graduado em Medicina pela Universidade Federal de Pelotas/UFPel-RS, realizou residência Médica em Oftalmologia no Hospital de Olhos do Blumenau.',
-      'Membro do Conselho Brasileiro de Oftalmologia (CBO).',
-      'Membro da Sociedade Brasileira de Catarata e Implantes Intraoculares.',
-      'Membro da Sociedade Brasileira de Cirurgia Refrativa.',
-      'O Dr. Vinicius atende na unidades HOF - Timbó.',
-    ],
-    image: vinicius,
-  },
-  {
     name: 'Dr. Lucas H. Leitis',
     desc: 'O Dr. Lucas H. Leitis é especialista em retina aqui no HOF!',
     items: [
