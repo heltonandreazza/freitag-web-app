@@ -95,14 +95,14 @@ const Equipe = () => (
   <div>
     <Navigator />
     <main>
-      <div className='relative h-80 flex items-center justify-center'>
+      {/* <div className='relative h-80 flex items-center justify-center'>
         <div className='absolute top-0 left-0 h-full w-full bg-blue-400 opacity-20' />
         <img
           className='h-full w-full object-cover'
           src={bannerCorpoClinico}
           alt='bannerCorpoClinico'
         />
-      </div>
+      </div> */}
       {team.map(({ name, desc, items, image }, index) => (
         <Colaborador
           name={name}
