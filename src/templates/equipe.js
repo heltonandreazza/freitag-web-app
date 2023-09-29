@@ -86,7 +86,7 @@ const Equipe = ({ data }) => {
 
 export const pageQuery = graphql`
   query {
-    allContentfulTeamMember {
+    allContentfulTeamMember(sort: { fields: order, order: ASC }) {
       edges {
         node {
           name
