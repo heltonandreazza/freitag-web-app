@@ -101,6 +101,15 @@ const createPageAuthors = ({ graphql, actions: { createPage } }, response) => {
   })
 }
 
+const createPageEquipe = async ({ actions: { createPage } }) => {
+  const equipeTemplate = path.resolve('src/templates/equipe.js')
+
+  createPage({
+    path: '/equipe',
+    component: equipeTemplate,
+  })
+}
+
 exports.createPages = async (props) => {
   const { graphql } = props
 
@@ -134,4 +143,5 @@ exports.createPages = async (props) => {
   createPagePost(props, response)
   createPageCategories(props, response)
   createPageAuthors(props, response)
+  createPageEquipe(props)
 }
