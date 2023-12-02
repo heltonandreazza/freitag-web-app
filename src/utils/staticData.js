@@ -37,13 +37,17 @@ const staticData = {
         é retirado e, logo em seguida, substituído por uma lente sintética transparente, que permite restaurar a visão.
       `,
     },
-    {
-      name: 'Transplante de córnea',
-      img: cornea,
-      desc: `
-      O Transplante de Córnea é um procedimento cirúrgico que consiste na substituição do centro de uma córnea doente por outra saudável, a partir de um doador. Tem como objetivo melhorar a visão ou corrigir perfurações oculares. É uma cirurgia muito bonita, com ótimos resultados.
-    `,
-    },
+    /* 
+    * Opção de exame 'Transplante de Córnea' temporariamente não disponível
+    * Comentado em: 28/11/2023, devido a procedimento não estar sendo oferecido atualmente
+    */
+    // {
+    //   name: 'Transplante de córnea',
+    //   img: cornea,
+    //   desc: `
+    //   O Transplante de Córnea é um procedimento cirúrgico que consiste na substituição do centro de uma córnea doente por outra saudável, a partir de um doador. Tem como objetivo melhorar a visão ou corrigir perfurações oculares. É uma cirurgia muito bonita, com ótimos resultados.
+    // `,
+    // },
     {
       name: 'Cirurgia de pterígio',
       img: pterigio,
@@ -60,13 +64,17 @@ const staticData = {
       A cirurgia para correção de estrabismo restabelece o equilíbrio entre as forças dos músculos oculares externos, reposicionando o globo ocular. O procedimento corrige o desalinhamento e, quando possível, restaura a visão binocular.
     `,
     },
-    {
-      name: 'Crosslinking',
-      img: crosslinking,
-      desc: `
-      A técnica consiste na aplicação de raios ultravioleta na superfície ocular após a instilação de um agente fotossensibilizante (normalmente a Riboflavina ou Vitamina A) durante alguns minutos. Esta técnica é capaz de reforçar as ligações químicas das fibras de colágeno da Córnea.
-    `,
-    },
+    /* 
+    * Opção de exame 'Crosslinking' temporariamente não disponível
+    * Comentado em: 28/11/2023, devido a procedimento não estar sendo oferecido atualmente
+    */
+    // {
+    //   name: 'Crosslinking',
+    //   img: crosslinking,
+    //   desc: `
+    //   A técnica consiste na aplicação de raios ultravioleta na superfície ocular após a instilação de um agente fotossensibilizante (normalmente a Riboflavina ou Vitamina A) durante alguns minutos. Esta técnica é capaz de reforçar as ligações químicas das fibras de colágeno da Córnea.
+    // `,
+    // },
     {
       name: 'Capsulotomia YAG Laser',
       img: yag,
@@ -91,13 +99,17 @@ Anéis intracorneanos: são utilizados na fase intermediária da patologia, com 
 Transplante de córnea: esta opção é indicada em fases mais avançadas da doença. O transplante de córnea normalmente não costuma apresentar rejeição e as taxas de sucesso são superiores a 97%
     `,
     },
-    {
-      name: 'Cirurgia refrativa',
-      img: refrativa,
-      desc: `
-      A cirurgia refrativa a laser é indicada para tratar de casos de Miopia, Hipermetropia, Astigmatismo e Presbiopia. É um procedimento de alta segurança, exatidão e bons resultados. Na maioria dos casos, o paciente pode ganhar independência do uso de óculos e lentes, conquistando maior comodidade e qualidade de vida.
-    `,
-    },
+    /* 
+    * Opção de exame 'Cirurgia refrativa' temporariamente não disponível
+    * Comentado em: 28/11/2023, devido a procedimento não estar sendo oferecido atualmente
+    */
+    // {
+    //   name: 'Cirurgia refrativa',
+    //   img: refrativa,
+    //   desc: `
+    //   A cirurgia refrativa a laser é indicada para tratar de casos de Miopia, Hipermetropia, Astigmatismo e Presbiopia. É um procedimento de alta segurança, exatidão e bons resultados. Na maioria dos casos, o paciente pode ganhar independência do uso de óculos e lentes, conquistando maior comodidade e qualidade de vida.
+    // `,
+    // },
     {
       name: 'Cirurgia plastica oftamológica',
       img: oftalmologica,
@@ -105,17 +117,21 @@ Transplante de córnea: esta opção é indicada em fases mais avançadas da doe
       A cirurgia plástica ocular trabalha no cuidado e na remodelação das pálpebras e dos tecidos em volta dos olhos, como glândulas, cílios e o sistema de drenagem das lágrimas.
     `,
     },
-    {
-      name: 'Implante de anel intra-estromal',
-      img: intraestromal,
-      desc: `
-      O anel corneano ou anel intraestromal é uma técnica de cirurgia para correção do Ceratocone. Apesar do nome, não é exatamente um anel. É um segmento de anel feito de um material biocompatível (PMMA) que é implantado na camada média da córnea, chamada estroma.
+    /* 
+    * Opção de exame 'Implante de anel intra-estromal' temporariamente não disponível
+    * Comentado em: 28/11/2023, devido a procedimento não estar sendo oferecido atualmente
+    */
+//     {
+//       name: 'Implante de anel intra-estromal',
+//       img: intraestromal,
+//       desc: `
+//       O anel corneano ou anel intraestromal é uma técnica de cirurgia para correção do Ceratocone. Apesar do nome, não é exatamente um anel. É um segmento de anel feito de um material biocompatível (PMMA) que é implantado na camada média da córnea, chamada estroma.
 
-Indicações:
+// Indicações:
 
-O implante está indicado para doenças da córnea em que ocorre alteração de sua curvatura, como no ceratocone e na degeneração marginal pelúcida, em casos avançados que não é possível a correção com óculos ou com adaptação de lentes de contato especiais.
-    `,
-    },
+// O implante está indicado para doenças da córnea em que ocorre alteração de sua curvatura, como no ceratocone e na degeneração marginal pelúcida, em casos avançados que não é possível a correção com óculos ou com adaptação de lentes de contato especiais.
+//     `,
+//     },
     {
       name: 'Cirurgia de vias lacrimais',
       img: lacrimais,
